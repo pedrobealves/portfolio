@@ -1,0 +1,13 @@
+@use '_variables' as *;
+
+:host {
+  width: 30.63em;
+  height: 100%;
+  background-color: $green;
+  color: $smoke;
+  border-radius: $border-radius;
+  flex-direction: column;
+  padding: $padding;
+  display: flex;
+  position: relative;
+}

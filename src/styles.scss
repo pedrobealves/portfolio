@@ -1,8 +1,28 @@
+@use '_variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-body{
-	-webkit-font-smoothing: antialiased;
+body {
+  color: $smoke;
+  background-color: $dark-purple;
+  letter-spacing: 0.08em;
+  font-family: Lato, sans-serif;
+  font-size: 0.9vw;
+  font-weight: 700;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
+}
+
+.main-grid {
+  flex-direction: column;
+  display: flex;
 }
