@@ -1,0 +1,15 @@
+<div class="skills-header">
+  <h3>Habilidades</h3>
+  <div class="skills-header-line"></div>
+</div>
+<ul class="skills-container">
+  @for (skill of skills$ | async; track skill.name) {
+  <li class="skills-container-btn">
+    <img
+      [src]="'https://cdn.simpleicons.org/' + skill.name + '/62FD85'"
+      alt=" "
+    />
+    {{ skill.name }}
+  </li>
+  }
+</ul>

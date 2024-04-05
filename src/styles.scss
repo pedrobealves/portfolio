@@ -1,6 +1,39 @@
 @use '_variables' as *;
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 body {
   color: $smoke;
   background-color: $dark-purple;
@@ -14,6 +47,19 @@ body {
   @media screen and (max-width: 991px) {
     font-size: 3vw;
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a {
+  overflow-wrap: break-word;
 }
 
 button {
@@ -34,6 +80,11 @@ img {
   vertical-align: middle;
   display: inline-block;
   border: 0;
+}
+
+.main-grid {
+  flex-direction: column;
+  display: flex;
 }
 
 .btn {
@@ -74,19 +125,4 @@ img {
       }
     }
   }
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-.main-grid {
-  flex-direction: column;
-  display: flex;
 }
