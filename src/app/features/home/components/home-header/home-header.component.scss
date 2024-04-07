@@ -1,41 +1,27 @@
 @use '_variables' as *;
 
 :host {
-  .card {
-    flex-direction: row;
+  padding-left: $padding;
+  padding-right: $padding;
+  padding-bottom: $padding;
+  border-bottom: 0.2em solid $dark-green;
+  .header {
     display: flex;
-    gap: $padding;
-
-    &-logo {
-      width: 4.5em;
+    align-items: center;
+    &__logo {
+      width: 2em;
+      margin-right: $padding;
+      color: $black-green;
     }
-
-    &-dots {
-      height: 4.5em;
+    &__title {
+      font-size: 1.1em;
+      font-weight: bolder;
+      color: $black-green;
+    }
+    &__dots {
+      width: 4em;
+      object-fit: contain;
       margin-left: auto;
     }
-
-    div {
-      color: $neutral-100;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      h1 {
-        font-size: 2em;
-        font-weight: bolder;
-        margin: 0;
-        letter-spacing: 0.015em;
-        line-height: 1;
-      }
-      p {
-        font-size: 1.11em;
-        margin: 0;
-        text-transform: lowercase;
-        letter-spacing: 0.015em;
-      }
-    }
   }
-  background-color: $dark-green;
-  border-radius: $border-radius;
-  padding: $padding;
 }

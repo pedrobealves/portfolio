@@ -1,10 +1,7 @@
-<div class="card">
-  <img src="assets/icons/logo.svg" alt="logo" class="card-logo" />
+<div class="header">
+  <img src="assets/icons/logo.svg" alt="logo" class="header__logo" />
   @if(profile$ | async; as profile) {
-  <div>
-    <p>{{ profile.description }}</p>
-    <h1>{{ profile.name }}</h1>
-  </div>
+  <h1 class="header__title">{{ profile.name }}</h1>
   }
-  <img src="assets/icons/dots-header.svg" alt="dots" class="card-dots" />
+  <img src="assets/icons/dots-header.png" alt="dots" class="header__dots" />
 </div>

@@ -42,8 +42,9 @@ body {
   font-size: 0.9vw;
   font-weight: 700;
   line-height: 1.2;
+  user-select: none;
   -webkit-font-smoothing: antialiased;
-
+  text-transform: uppercase;
   @media screen and (max-width: 991px) {
     font-size: 3vw;
   }
