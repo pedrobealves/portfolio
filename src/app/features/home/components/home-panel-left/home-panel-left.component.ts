@@ -13,7 +13,12 @@ import { HomeSkillsWallComponent } from '../home-skills-wall/home-skills-wall.co
     HomeContactComponent,
     HomeSkillsWallComponent
   ],
-  templateUrl: './home-panel-left.component.html',
+  template: `
+    <app-home-header />
+    <app-home-avatar />
+    <app-home-contact />
+    <app-home-skills-wall />
+  `,
   styleUrl: './home-panel-left.component.scss'
 })
 export class HomePanelLeftComponent {}
