@@ -116,14 +116,24 @@ img {
     transition: box-shadow 0.1s, transform 0.1s;
     display: flex;
 
+    &:hover {
+      box-shadow: none;
+      transform: translateY(0.5em);
+    }
+
     &--yellow {
       background-color: $yellow;
       color: $dark-yellow;
       box-shadow: 0 0.5em 0 $dark-yellow;
-      &:hover {
-        box-shadow: none;
-        transform: translateY(0.5em);
+
+      &:active {
+        box-shadow: 0 -0.5em 0 $dark-yellow,
+          inset 0 100em 100em rgba(0, 0, 0, 0.1);
       }
+    }
+
+    &:active {
+      transform: translateY(1em);
     }
   }
 }
@@ -139,11 +149,22 @@ img {
   overflow: hidden;
 
   &:hover & {
-    color: $smoke;
-
     &__up {
       box-shadow: none;
       transform: translateY(0.5em);
+    }
+
+    &__icon {
+      &--purple path {
+        fill: $smoke;
+      }
+    }
+  }
+
+  &:active & {
+    &__up {
+      box-shadow: 0 -0.5em 0 $purple, inset 0 100em 100em rgba(0, 0, 0, 0.1);
+      transform: translateY(1em);
     }
   }
 
@@ -168,6 +189,15 @@ img {
     transition: transform 0.1s, box-shadow 0.1s;
     display: flex;
     box-shadow: 0 0.5em 0 $purple;
+  }
+
+  &__icon {
+    width: 2em;
+    height: 2em;
+
+    &--purple path {
+      fill: $white-purple;
+    }
   }
 }
 

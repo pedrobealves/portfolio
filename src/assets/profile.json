@@ -5,17 +5,16 @@
   "socialMedias": {
     "links": [
       {
+        "name": "github",
+        "href": "https://github.com/pedrobealves"
+      },
+      {
         "name": "twitter",
         "href": "https://twitter.com/pedrobealves"
       },
       {
         "name": "linkedin",
         "href": "https://linkedin.com/in/pedro-bernardi-alves"
-      },
-      {
-        "name": "email",
-        "logo": "gmail",
-        "href": "mailto:pedrobealves@gmail.com"
       }
     ]
   }
