@@ -37,5 +37,9 @@
 
   .row {
     flex-direction: row;
+
+    @media screen and (max-width: 991px) {
+      flex-direction: column;
+    }
   }
 }

@@ -1,14 +1,14 @@
 @if (type == 'big') {
 <div class="big-round-btn big-round-btn--purple big-round-btn--radius">
   <div class="big-round-btn__up">
-    <ng-content />
+    <ng-content select="div" />
   </div>
 </div>
-} @if (type == 'small') {
+} @else if (type == 'small') {
 <div class="small-round-btn small-round-btn--radius">
   <div class="small-round-btn__up">
     <div class="small-round-btn__icon">
-      <ng-content />
+      <ng-content select="div" />
     </div>
   </div>
 </div>

@@ -1,9 +1,10 @@
+import { CommonModule } from '@angular/common'
 import { Component, Input } from '@angular/core'
 
 @Component({
   selector: 'app-round-button',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './round-button.component.html',
   styleUrl: './round-button.component.scss'
 })
