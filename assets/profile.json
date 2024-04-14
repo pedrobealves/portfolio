@@ -6,14 +6,17 @@
     "links": [
       {
         "name": "github",
+        "icon": "faBrandGithub",
         "href": "https://github.com/pedrobealves"
       },
       {
         "name": "twitter",
+        "icon": "faBrandXTwitter",
         "href": "https://twitter.com/pedrobealves"
       },
       {
         "name": "linkedin",
+        "icon": "faBrandLinkedinIn",
         "href": "https://linkedin.com/in/pedro-bernardi-alves"
       }
     ]
