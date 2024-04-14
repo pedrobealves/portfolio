@@ -1,29 +1,17 @@
-<div class="card">
-  <div class="card__container card__container--row">
-    @if(profile$ | async; as profile) { @for (social of
-    profile.socialMedias.links; track social.name) {
-    <div class="card-round-btn">
-      <div class="screws">
-        <div class="screw screw--purple"></div>
-        <div class="screw screw--purple"></div>
-      </div>
-      <a [href]="social.href" target="_blank">
-        <div class="big-round-btn big-round-btn--purple big-round-btn--radius">
-          <div class="big-round-btn__up">
-            <div class="big-round-btn__icon">
-              <svg-icon
-                class="big-round-btn__icon--purple"
-                [src]="'assets/icons/' + social.name + '.svg'"
-              />
-            </div>
-          </div>
+<app-card type="row">
+  @if(profile$ | async; as profile) { @for (social of
+  profile.socialMedias.links; track social.name) {
+  <app-card-button>
+    <a [href]="social.href" target="_blank">
+      <app-round-button type="big">
+        <div class="big-round-btn__icon">
+          <ng-icon
+            class="big-round-btn__icon--purple"
+            [name]="social.icon"
+          ></ng-icon>
         </div>
-      </a>
-      <div class="screws">
-        <div class="screw screw--purple"></div>
-        <div class="screw screw--purple"></div>
-      </div>
-    </div>
-    } }
-  </div>
-</div>
+      </app-round-button>
+    </a>
+  </app-card-button>
+  } }
+</app-card>

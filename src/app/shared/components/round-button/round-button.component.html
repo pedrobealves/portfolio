@@ -1,0 +1,15 @@
+@if (type == 'big') {
+<div class="big-round-btn big-round-btn--purple big-round-btn--radius">
+  <div class="big-round-btn__up">
+    <ng-content />
+  </div>
+</div>
+} @if (type == 'small') {
+<div class="small-round-btn small-round-btn--radius">
+  <div class="small-round-btn__up">
+    <div class="small-round-btn__icon">
+      <ng-content />
+    </div>
+  </div>
+</div>
+}

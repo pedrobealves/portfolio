@@ -1,0 +1,41 @@
+@use '_variables' as *;
+
+:host {
+  .card {
+    border: 1px solid $medium-purple;
+    background-color: $medium-purple;
+    border-radius: 0.83em;
+    transition: border-color 0.2s, background-color 0.2s;
+    position: relative;
+
+    &:hover {
+      background-color: $light-purple;
+      border-color: $smoke;
+      outline-color: $soft-purple;
+    }
+
+    &__container {
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      padding: $padding;
+      display: flex;
+      gap: $padding;
+    }
+
+    &__header {
+      width: 100%;
+      background-color: $dark-purple;
+      border-radius: 0.56em;
+      justify-content: space-between;
+      align-items: center;
+      padding: $padding;
+      transition: background-color 0.1s;
+      display: flex;
+    }
+  }
+
+  .row {
+    flex-direction: row;
+  }
+}

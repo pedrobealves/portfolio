@@ -1,0 +1,10 @@
+:host {
+  .projects {
+    &__head {
+      border-radius: 0 0 0.83em 0.83em;
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+    }
+  }
+}

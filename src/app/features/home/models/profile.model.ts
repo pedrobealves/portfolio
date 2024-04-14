@@ -2,7 +2,7 @@ interface SocialMedia {
   links: {
     name: string
     href: string
-    logo?: string
+    icon: string
   }[]
 }
 

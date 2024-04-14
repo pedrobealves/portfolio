@@ -1,0 +1,36 @@
+@use '_variables' as *;
+
+:host {
+  width: 100%;
+
+  .header {
+    background-color: $dark-purple;
+    border-radius: 0.56em;
+    justify-content: space-between;
+    align-items: center;
+    padding: $padding;
+    transition: background-color 0.1s;
+    display: flex;
+
+    &__container {
+      align-items: center;
+      display: flex;
+    }
+
+    &__icon {
+      width: 3.87em;
+      height: 3.87em;
+      background-color: var(--dark-black);
+      border-radius: 0.42em;
+      justify-content: center;
+      align-items: center;
+      margin-right: $padding;
+      display: flex;
+    }
+
+    &__title {
+      font-size: 1.11em;
+      font-weight: bolder;
+    }
+  }
+}

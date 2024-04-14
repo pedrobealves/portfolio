@@ -1,0 +1,49 @@
+@use '_variables' as *;
+
+.big-round-btn {
+  min-height: 7em;
+  cursor: pointer;
+  border-radius: 100em;
+  justify-content: center;
+  margin-top: -0.5em;
+  transition: color 0.1s;
+  display: flex;
+  overflow: hidden;
+
+  &:hover & {
+    &__up {
+      box-shadow: none;
+      transform: translateY(0.5em);
+    }
+  }
+
+  &:active & {
+    &__up {
+      box-shadow: 0 -0.5em 0 $purple, inset 0 100em 100em rgba(0, 0, 0, 0.1);
+      transform: translateY(1em);
+    }
+  }
+
+  &--purple {
+    color: $white-purple;
+  }
+
+  &--radius {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+  }
+
+  &__up {
+    width: 6.5em;
+    height: 6.5em;
+    background-color: $medium-purple;
+    border-radius: 100em;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.1s, box-shadow 0.1s;
+    display: flex;
+    box-shadow: 0 0.5em 0 $purple;
+  }
+}

@@ -1,0 +1,53 @@
+@use '_variables' as *;
+
+:host {
+  .btn {
+    min-height: 4em;
+    color: $dark-green;
+    cursor: pointer;
+    border-radius: 0.28em;
+    margin-top: -0.5em;
+    overflow: hidden;
+
+    span {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      font-size: 1.25em;
+      text-transform: uppercase;
+      font-weight: bolder;
+    }
+
+    &__up {
+      min-height: 3.54em;
+      border-radius: 0.28em;
+      justify-content: center;
+      align-items: center;
+      padding-left: 1.81em;
+      padding-right: 1.81em;
+      transition: box-shadow 0.1s, transform 0.1s;
+      display: flex;
+
+      &:hover {
+        box-shadow: none;
+        transform: translateY(0.5em);
+      }
+
+      &--yellow {
+        background-color: $yellow;
+        color: $dark-yellow;
+        box-shadow: 0 0.5em 0 $dark-yellow;
+
+        &:active {
+          box-shadow: 0 -0.5em 0 $dark-yellow,
+            inset 0 100em 100em rgba(0, 0, 0, 0.1);
+        }
+      }
+
+      &:active {
+        transform: translateY(1em);
+      }
+    }
+  }
+}
