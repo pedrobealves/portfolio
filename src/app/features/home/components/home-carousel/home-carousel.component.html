@@ -1,0 +1,5 @@
+<div class="keen-slider" #sliderRef>
+  <ng-container *ngFor="let src of images; let idx = index">
+    <img class="keen-slider__slide number-slide{{ idx + 1 }}" [src]="src" />
+  </ng-container>
+</div>
