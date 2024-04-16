@@ -1,15 +1,17 @@
-@if (type == 'big') {
-<div class="big-round-btn big-round-btn--purple big-round-btn--radius">
-  <div class="big-round-btn__up">
-    <ng-content select="div" />
+<div
+  class="round-btn round-btn--radius"
+  [ngClass]="{
+    'round-btn--big': size == 'big',
+    'round-btn--small': size == 'small'
+  }"
+>
+  <div
+    class="round-btn__up round-btn__up--purple"
+    [ngClass]="{
+      'round-btn__up--big': size == 'big',
+      'round-btn__up--small': size == 'small'
+    }"
+  >
+    <ng-content></ng-content>
   </div>
 </div>
-} @else if (type == 'small') {
-<div class="small-round-btn small-round-btn--radius">
-  <div class="small-round-btn__up">
-    <div class="small-round-btn__icon">
-      <ng-content select="div" />
-    </div>
-  </div>
-</div>
-}

@@ -3,14 +3,14 @@
   profile.socialMedias.links; track social.name) {
   <app-card-button>
     <a [href]="social.href" target="_blank">
-      <app-round-button type="big">
-        <div class="big-round-btn__icon">
+      <button type="button" app-round-button size="big">
+        <div class="round-btn__icon">
           <ng-icon
-            class="big-round-btn__icon--purple"
+            class="round-btn__icon--purple"
             [name]="social.icon"
           ></ng-icon>
         </div>
-      </app-round-button>
+      </button>
     </a>
   </app-card-button>
   } }

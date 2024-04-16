@@ -64,16 +64,9 @@ a {
 }
 
 button {
-  -webkit-appearance: none;
-  border-radius: 0;
-  text-align: inherit;
-  background: none;
-  box-shadow: none;
-  padding: 0;
-  cursor: pointer;
-  border: none;
-  color: inherit;
-  font: inherit;
+  all: unset;
+  display: block;
+  unicode-bidi: isolate;
 }
 
 img {
@@ -89,7 +82,7 @@ img {
   gap: $padding;
 }
 
-.big-round-btn {
+.round-btn {
   &:hover & {
     &__icon {
       &--purple path {

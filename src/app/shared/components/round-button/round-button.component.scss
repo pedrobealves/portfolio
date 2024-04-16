@@ -1,14 +1,21 @@
 @use '_variables' as *;
 
-.big-round-btn {
-  min-height: 7em;
+.round-btn {
   cursor: pointer;
-  border-radius: 100em;
-  justify-content: center;
   margin-top: -0.5em;
-  transition: color 0.1s;
-  display: flex;
   overflow: hidden;
+  border-radius: 100em;
+
+  &--big {
+    min-height: 7em;
+    display: flex;
+    justify-content: center;
+    transition: color 0.1s;
+  }
+
+  &--small {
+    min-height: 4em;
+  }
 
   &:hover & {
     &__up {
@@ -24,10 +31,6 @@
     }
   }
 
-  &--purple {
-    color: $white-purple;
-  }
-
   &--radius {
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
@@ -36,14 +39,27 @@
   }
 
   &__up {
-    width: 6.5em;
-    height: 6.5em;
-    background-color: $medium-purple;
-    border-radius: 100em;
     justify-content: center;
     align-items: center;
-    transition: transform 0.1s, box-shadow 0.1s;
+    transition: box-shadow 0.1s, transform 0.1s;
     display: flex;
-    box-shadow: 0 0.5em 0 $purple;
+    border-radius: 100em;
+    padding-left: 1.11em;
+    padding-right: 1.11em;
+
+    &--small {
+      min-height: 3.54em;
+    }
+
+    &--big {
+      width: 6.5em;
+      height: 6.5em;
+    }
+
+    &--purple {
+      box-shadow: 0 0.5em 0 $purple;
+      background-color: $medium-purple;
+      color: $smoke;
+    }
   }
 }
