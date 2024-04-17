@@ -3,8 +3,8 @@ import { CardComponent } from '../../../../shared/components/card/card.component
 import { CardHeaderComponent } from '../../../../shared/components/card-header/card-header.component'
 import { RoundButtonComponent } from '../../../../shared/components/round-button/round-button.component'
 import { SvgIconComponent } from 'angular-svg-icon'
-import { HomeCarouselComponent } from '../home-carousel/home-carousel.component'
 import { CarouselService } from '../../services/carousel.service'
+import { HomeCarouselComponent } from '../home-carousel/home-carousel.component'
 
 @Component({
   selector: 'app-home-projects',
@@ -23,10 +23,10 @@ export class HomeProjectsComponent {
   constructor(private carouselService: CarouselService) {}
 
   next() {
-    this.carouselService.next()
+    this.carouselService.moveNext()
   }
 
   prev() {
-    this.carouselService.prev()
+    this.carouselService.movePrev()
   }
 }

@@ -2,15 +2,17 @@
   <div class="projects__head">
     <app-card-header title="projetos" icon="faSolidImage" />
     <button type="button" app-round-button size="small" (click)="prev()">
-      <div class="icon">
+      <div class="projects__icon">
         <svg-icon src="assets/icons/arrow.svg"></svg-icon>
       </div>
     </button>
     <button type="button" app-round-button size="small" (click)="next()">
-      <div class="icon icon--rotate">
+      <div class="projects__icon projects__icon--rotate">
         <svg-icon src="assets/icons/arrow.svg"></svg-icon>
       </div>
     </button>
   </div>
-  <div class="slider"><app-home-carousel /></div>
+  <div class="projects__carousel">
+    <app-home-carousel />
+  </div>
 </app-card>

@@ -1,33 +1,26 @@
 import { Injectable } from '@angular/core'
-import { BehaviorSubject } from 'rxjs'
+import { Subject } from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
 })
 export class CarouselService {
-  private currentIndexSubject = new BehaviorSubject<number>(0)
-  currentIndex$ = this.currentIndexSubject.asObservable()
-  private maxIndex: number = 0
+  private moveNextSubject = new Subject<void>()
+  private movePrevSubject = new Subject<void>()
 
-  constructor() {}
-
-  init(maxIndex: number) {
-    this.maxIndex = maxIndex
+  moveNext() {
+    this.moveNextSubject.next()
   }
 
-  next() {
-    let currentIndex = this.currentIndexSubject.value + 1
-    if (currentIndex >= this.maxIndex) {
-      currentIndex = 0 // Volta para o primeiro slide
-    }
-    this.currentIndexSubject.next(currentIndex)
+  movePrev() {
+    this.movePrevSubject.next()
   }
 
-  prev() {
-    let currentIndex = this.currentIndexSubject.value - 1
-    if (currentIndex < 0) {
-      currentIndex = this.maxIndex - 1 // Vai para o último slide
-    }
-    this.currentIndexSubject.next(currentIndex)
+  onNext() {
+    return this.moveNextSubject.asObservable()
+  }
+
+  onPrev() {
+    return this.movePrevSubject.asObservable()
   }
 }

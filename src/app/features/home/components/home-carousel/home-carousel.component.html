@@ -1,5 +1,7 @@
-<div class="keen-slider" #sliderRef>
-  <ng-container *ngFor="let src of images; let idx = index">
-    <img class="keen-slider__slide number-slide{{ idx + 1 }}" [src]="src" />
-  </ng-container>
+<div class="embla" emblaCarousel [options]="options">
+  <div class="embla__container">
+    <ng-container *ngFor="let src of images; let idx = index">
+      <img class="embla__slide" [src]="src" />
+    </ng-container>
+  </div>
 </div>

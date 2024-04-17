@@ -7,18 +7,23 @@
       display: flex;
       gap: $padding;
     }
-  }
 
-  .slider {
-    max-width: 34.72em;
-  }
+    &__carousel {
+      min-height: 20em;
+      background-color: $purple;
+      border-radius: 0.83em;
+      padding: 0.9em;
+      position: relative;
+      overflow: hidden;
+    }
 
-  .icon {
-    width: 1.6em;
-    height: 1.39em;
+    &__icon {
+      width: 1.6em;
+      height: 1.39em;
 
-    &--rotate {
-      transform: rotate(180deg);
+      &--rotate {
+        transform: rotate(180deg);
+      }
     }
   }
 }
