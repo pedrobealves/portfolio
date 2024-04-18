@@ -6,11 +6,12 @@ import {
   provideNgIconsConfig
 } from '@ng-icons/core'
 import { faSolidImage } from '@ng-icons/font-awesome/solid'
+import { SvgIconComponent } from 'angular-svg-icon'
 
 @Component({
   selector: 'app-card-header',
   standalone: true,
-  imports: [NgIconComponent],
+  imports: [NgIconComponent, SvgIconComponent],
   viewProviders: [provideIcons({ faSolidImage })],
   providers: [
     provideNgIconsConfig({

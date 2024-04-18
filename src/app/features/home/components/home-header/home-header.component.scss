@@ -1,6 +1,7 @@
 @use '_variables' as *;
 
 :host {
+  display: block;
   padding-left: $padding;
   padding-right: $padding;
   padding-bottom: $padding;

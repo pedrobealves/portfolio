@@ -48,6 +48,10 @@ body {
   @media screen and (max-width: 991px) {
     font-size: 3vw;
   }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 13px;
+  }
 }
 
 h1,
@@ -85,7 +89,7 @@ img {
 .round-btn {
   &:hover & {
     &__icon {
-      &--purple path {
+      path {
         fill: $smoke;
       }
     }
@@ -93,15 +97,39 @@ img {
   &__icon {
     width: 2em;
     height: 2em;
+  }
+}
 
-    &--purple path {
+.icon {
+  &--yellow {
+    path {
+      fill: $yellow;
+    }
+  }
+
+  &--purple {
+    path {
       fill: $white-purple;
+    }
+  }
+
+  &--medium-purple {
+    path {
+      fill: $medium-purple;
+    }
+  }
+
+  &--soft-purple {
+    path {
+      fill: $soft-purple;
     }
   }
 }
 
-.header__icon--yellow {
-  path {
-    fill: $yellow;
-  }
+.screw {
+  width: 2.22em;
+  height: 2.22em;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }

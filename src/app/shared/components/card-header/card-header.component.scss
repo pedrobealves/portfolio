@@ -32,5 +32,9 @@
       font-size: 1.11em;
       font-weight: bolder;
     }
+
+    &__dots {
+      display: flex;
+    }
   }
 }
