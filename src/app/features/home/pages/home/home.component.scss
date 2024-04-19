@@ -16,6 +16,13 @@
   gap: $padding;
   grid-area: span 1 / span 3 / span 1 / span 3;
 
+  @media screen and (max-width: 991px) {
+    grid-area: span 1 / span 1 / span 1 / span 1;
+    justify-content: center;
+    padding-top: 1.11em;
+    padding-bottom: 1.11em;
+  }
+
   &__bar {
     height: 80%;
     background-image: url('../../../../../assets/images/bar.svg');
@@ -24,6 +31,10 @@
     background-size: contain;
     background-attachment: scroll;
     flex: 1;
+
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
   }
 
   &__link {
