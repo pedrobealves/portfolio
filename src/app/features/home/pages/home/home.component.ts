@@ -14,4 +14,6 @@ import { HomePanelRightComponent } from '../../components/home-panel-right/home-
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {}
+export class HomeComponent {
+  currentYear: number = new Date().getFullYear()
+}

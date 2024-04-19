@@ -10,6 +10,33 @@
   overflow: hidden;
 }
 
+.footer {
+  align-items: center;
+  display: flex;
+  gap: $padding;
+  grid-area: span 1 / span 3 / span 1 / span 3;
+
+  &__bar {
+    height: 80%;
+    background-image: url('../../../../../assets/images/bar.svg');
+    background-position: 0%;
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-attachment: scroll;
+    flex: 1;
+  }
+
+  &__link {
+    color: $smoke;
+    text-decoration: underline;
+  }
+
+  &__text {
+    color: $smoke;
+    font-weight: bolder;
+  }
+}
+
 .container {
   width: 100%;
   max-width: 98.68em;
