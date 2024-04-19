@@ -7,4 +7,7 @@ import { Component, Input } from '@angular/core'
   templateUrl: './card-button.component.html',
   styleUrl: './card-button.component.scss'
 })
-export class CardButtonComponent {}
+export class CardButtonComponent {
+  @Input()
+  screws: boolean = false
+}

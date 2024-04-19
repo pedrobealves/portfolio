@@ -1,16 +1,14 @@
 <app-card type="row">
   @if(profile$ | async; as profile) { @for (social of
   profile.socialMedias.links; track social.name) {
-  <app-card-button>
-    <a [href]="social.href" target="_blank">
-      <button type="button" app-round-button size="big">
-        <div class="round-btn__icon">
-          <ng-icon
-            class="round-btn__icon icon--purple"
-            [name]="social.icon"
-          ></ng-icon>
-        </div>
-      </button>
+  <app-card-button [screws]="true">
+    <a [href]="social.href" target="_blank" app-round-button size="big">
+      <div class="round-btn__icon">
+        <ng-icon
+          class="round-btn__icon icon--purple"
+          [name]="social.icon"
+        ></ng-icon>
+      </div>
     </a>
   </app-card-button>
   } }

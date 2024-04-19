@@ -1,0 +1,30 @@
+<app-card type="flex-1">
+  <app-card-header
+    title="Educação"
+    icon="remixGraduationCapFill"
+  ></app-card-header>
+  <div class="container">
+    @for (education of educations$ | async; track education.name;) {
+    <app-card-button>
+      <app-round-link
+        ><img
+          [src]="education.logo"
+          [alt]="education.name"
+          class="container__logo"
+      /></app-round-link>
+    </app-card-button>
+    }
+    <app-card-button>
+      <svg-icon
+        class="container__screw icon--soft-purple"
+        src="assets/icons/screw.svg"
+      />
+    </app-card-button>
+    <app-card-button>
+      <svg-icon
+        class="container__screw icon--soft-purple"
+        src="assets/icons/screw.svg"
+      />
+    </app-card-button>
+  </div>
+</app-card>

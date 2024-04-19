@@ -86,6 +86,10 @@ img {
   gap: $padding;
 }
 
+a {
+  text-decoration: none;
+}
+
 .round-btn {
   &:hover & {
     &__icon {

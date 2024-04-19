@@ -5,4 +5,5 @@ export interface Education {
   start: string
   end?: string
   description?: string
+  logo: string
 }

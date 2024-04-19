@@ -35,6 +35,11 @@
 
     &__dots {
       display: flex;
+      svg {
+        width: 3.5em;
+        height: 2em;
+        object-fit: contain;
+      }
     }
   }
 }

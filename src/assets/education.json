@@ -4,13 +4,15 @@
     "start": "2019",
     "degree": "Graduação",
     "end": "2025",
-    "institution": "UTFPR"
+    "institution": "UTFPR",
+    "logo": "assets/images/utfpr.svg"
   },
   {
     "name": "Técnico em Informática",
     "start": "2012",
     "degree": "Técnico",
     "end": "2015",
-    "institution": "CERB"
+    "institution": "CERB",
+    "logo": "assets/images/computer.svg"
   }
 ]

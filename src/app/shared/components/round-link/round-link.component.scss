@@ -1,0 +1,12 @@
+@use '_variables' as *;
+
+:host {
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 100em;
+  width: 6.5em;
+  height: 6.5em;
+  border: 0.3em solid $soft-purple;
+}
