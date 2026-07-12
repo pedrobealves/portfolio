@@ -1,16 +1,5 @@
-import {
-  AfterViewInit,
-  Component,
-  Input,
-  ViewChild,
-  inject
-} from '@angular/core'
-import {
-  EmblaCarouselDirective,
-  EmblaCarouselType
-} from 'embla-carousel-angular'
-import { CarouselService } from '../../services/carousel.service'
-import { Subscription } from 'rxjs'
+import { Component, ViewChild, inject } from '@angular/core'
+import { EmblaCarouselDirective } from 'embla-carousel-angular'
 import { DataService } from '../../services/data.service'
 
 @Component({
@@ -20,30 +9,17 @@ import { DataService } from '../../services/data.service'
   templateUrl: './home-carousel.component.html',
   styleUrl: './home-carousel.component.scss'
 })
-export class HomeCarouselComponent implements AfterViewInit {
+export class HomeCarouselComponent {
+  @ViewChild(EmblaCarouselDirective) private emblaRef?: EmblaCarouselDirective
+
   protected projects = inject(DataService).projects
+  protected options = { loop: true }
 
-  @ViewChild(EmblaCarouselDirective)
-  emalaRef: EmblaCarouselDirective = new EmblaCarouselDirective()
-
-  emblaApi?: EmblaCarouselType
-  options = { loop: true }
-
-  constructor(private carouselService: CarouselService) {}
-
-  private subscriptions: Subscription[] = []
-
-  ngAfterViewInit() {
-    this.emblaApi = this.emalaRef.emblaApi
-    this.subscriptions.push(
-      this.carouselService
-        .onNext()
-        .subscribe(() => this.emblaApi?.scrollNext()),
-      this.carouselService.onPrev().subscribe(() => this.emblaApi?.scrollPrev())
-    )
+  scrollNext() {
+    this.emblaRef?.emblaApi?.scrollNext()
   }
 
-  ngOnDestroy() {
-    this.subscriptions.forEach((sub) => sub.unsubscribe())
+  scrollPrev() {
+    this.emblaRef?.emblaApi?.scrollPrev()
   }
 }

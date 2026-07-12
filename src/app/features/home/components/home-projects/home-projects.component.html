@@ -1,18 +1,18 @@
 <app-card type="flex-1">
   <div class="projects__head">
     <app-card-header title="projetos" icon="faSolidImage" />
-    <button type="button" app-round-button size="small" (click)="prev()">
+    <button type="button" app-round-button size="small" (click)="carousel.scrollPrev()">
       <div class="projects__icon">
         <svg-icon src="assets/icons/arrow.svg"></svg-icon>
       </div>
     </button>
-    <button type="button" app-round-button size="small" (click)="next()">
+    <button type="button" app-round-button size="small" (click)="carousel.scrollNext()">
       <div class="projects__icon projects__icon--rotate">
         <svg-icon src="assets/icons/arrow.svg"></svg-icon>
       </div>
     </button>
   </div>
   <div class="projects__carousel">
-    <app-home-carousel />
+    <app-home-carousel #carousel />
   </div>
 </app-card>
