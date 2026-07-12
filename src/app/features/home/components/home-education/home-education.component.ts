@@ -6,17 +6,16 @@ import { DataService } from '../../services/data.service'
 import { SvgIconComponent } from 'angular-svg-icon'
 
 @Component({
-  selector: 'app-home-education',
-  standalone: true,
-  imports: [
-    CardComponent,
-    CardHeaderComponent,
-    CardButtonComponent,
-    SvgIconComponent
-  ],
-  templateUrl: './home-education.component.html',
-  styleUrl: './home-education.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-home-education',
+    imports: [
+        CardComponent,
+        CardHeaderComponent,
+        CardButtonComponent,
+        SvgIconComponent
+    ],
+    templateUrl: './home-education.component.html',
+    styleUrl: './home-education.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeEducationComponent {
   protected educations = inject(DataService).educations

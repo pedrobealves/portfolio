@@ -10,18 +10,17 @@ import { remixGraduationCapFill } from '@ng-icons/remixicon'
 import { SvgIconComponent } from 'angular-svg-icon'
 
 @Component({
-  selector: 'app-card-header',
-  standalone: true,
-  imports: [NgIconComponent, SvgIconComponent],
-  viewProviders: [provideIcons({ faSolidImage, remixGraduationCapFill })],
-  providers: [
-    provideNgIconsConfig({
-      size: '1.56em'
-    })
-  ],
-  templateUrl: './card-header.component.html',
-  styleUrl: './card-header.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-card-header',
+    imports: [NgIconComponent, SvgIconComponent],
+    viewProviders: [provideIcons({ faSolidImage, remixGraduationCapFill })],
+    providers: [
+        provideNgIconsConfig({
+            size: '1.56em'
+        })
+    ],
+    templateUrl: './card-header.component.html',
+    styleUrl: './card-header.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardHeaderComponent {
   title = input.required<string>()

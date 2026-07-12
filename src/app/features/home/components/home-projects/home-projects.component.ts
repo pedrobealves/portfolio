@@ -6,17 +6,16 @@ import { SvgIconComponent } from 'angular-svg-icon'
 import { HomeCarouselComponent } from '../home-carousel/home-carousel.component'
 
 @Component({
-  selector: 'app-home-projects',
-  standalone: true,
-  imports: [
-    CardComponent,
-    CardHeaderComponent,
-    RoundButtonComponent,
-    SvgIconComponent,
-    HomeCarouselComponent
-  ],
-  templateUrl: './home-projects.component.html',
-  styleUrl: './home-projects.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-home-projects',
+    imports: [
+        CardComponent,
+        CardHeaderComponent,
+        RoundButtonComponent,
+        SvgIconComponent,
+        HomeCarouselComponent
+    ],
+    templateUrl: './home-projects.component.html',
+    styleUrl: './home-projects.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeProjectsComponent {}

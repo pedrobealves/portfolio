@@ -5,21 +5,20 @@ import { HomeContactComponent } from '../home-contact/home-contact.component'
 import { HomeSkillsWallComponent } from '../home-skills-wall/home-skills-wall.component'
 
 @Component({
-  selector: 'app-home-panel-left',
-  standalone: true,
-  imports: [
-    HomeHeaderComponent,
-    HomeAvatarComponent,
-    HomeContactComponent,
-    HomeSkillsWallComponent
-  ],
-  template: `
+    selector: 'app-home-panel-left',
+    imports: [
+        HomeHeaderComponent,
+        HomeAvatarComponent,
+        HomeContactComponent,
+        HomeSkillsWallComponent
+    ],
+    template: `
     <app-home-header />
     <app-home-avatar />
     <app-home-contact />
     <app-home-skills-wall />
   `,
-  styleUrl: './home-panel-left.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    styleUrl: './home-panel-left.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomePanelLeftComponent {}

@@ -15,24 +15,23 @@ import {
 } from '@ng-icons/font-awesome/brands'
 
 @Component({
-  selector: 'app-home-social',
-  standalone: true,
-  imports: [
-    CardComponent,
-    CardButtonComponent,
-    RoundButtonComponent,
-    NgIconComponent
-  ],
-  viewProviders: [
-    provideIcons({ faBrandXTwitter, faBrandGithub, faBrandLinkedinIn })
-  ],
-  providers: [
-    provideNgIconsConfig({
-      size: '2em'
-    })
-  ],
-  templateUrl: './home-social.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-home-social',
+    imports: [
+        CardComponent,
+        CardButtonComponent,
+        RoundButtonComponent,
+        NgIconComponent
+    ],
+    viewProviders: [
+        provideIcons({ faBrandXTwitter, faBrandGithub, faBrandLinkedinIn })
+    ],
+    providers: [
+        provideNgIconsConfig({
+            size: '2em'
+        })
+    ],
+    templateUrl: './home-social.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeSocialComponent {
   protected profile = inject(DataService).profile

@@ -3,10 +3,9 @@ import { HomeEducationComponent } from '../home-education/home-education.compone
 import { HomeSoundComponent } from '../home-sound/home-sound.component'
 
 @Component({
-  selector: 'app-home-panel-right',
-  standalone: true,
-  imports: [HomeEducationComponent, HomeSoundComponent],
-  template: ` <app-home-education /> <app-home-sound /> `,
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-home-panel-right',
+    imports: [HomeEducationComponent, HomeSoundComponent],
+    template: ` <app-home-education /> <app-home-sound /> `,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomePanelRightComponent {}

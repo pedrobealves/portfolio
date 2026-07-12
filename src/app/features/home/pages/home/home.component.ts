@@ -5,16 +5,15 @@ import { HomePanelRightComponent } from '../../components/home-panel-right/home-
 import { DataService } from '../../services/data.service'
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [
-    HomePanelLeftComponent,
-    HomePanelCenterComponent,
-    HomePanelRightComponent
-  ],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-home',
+    imports: [
+        HomePanelLeftComponent,
+        HomePanelCenterComponent,
+        HomePanelRightComponent
+    ],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent {
   private data = inject(DataService)

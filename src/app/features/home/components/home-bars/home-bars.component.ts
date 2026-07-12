@@ -3,11 +3,10 @@ import { CardComponent } from '../../../../shared/components/card/card.component
 import { SvgIconComponent } from 'angular-svg-icon'
 
 @Component({
-  selector: 'app-home-bars',
-  standalone: true,
-  imports: [CardComponent, SvgIconComponent],
-  templateUrl: './home-bars.component.html',
-  styleUrl: './home-bars.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-home-bars',
+    imports: [CardComponent, SvgIconComponent],
+    templateUrl: './home-bars.component.html',
+    styleUrl: './home-bars.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeBarsComponent {}

@@ -3,11 +3,10 @@ import { CardComponent } from '../../../../shared/components/card/card.component
 import { SvgIconComponent } from 'angular-svg-icon'
 
 @Component({
-  selector: 'app-home-sound',
-  standalone: true,
-  imports: [CardComponent, SvgIconComponent],
-  templateUrl: './home-sound.component.html',
-  styleUrl: './home-sound.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-home-sound',
+    imports: [CardComponent, SvgIconComponent],
+    templateUrl: './home-sound.component.html',
+    styleUrl: './home-sound.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeSoundComponent {}

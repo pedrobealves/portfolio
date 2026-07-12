@@ -8,12 +8,11 @@ import { EmblaCarouselDirective } from 'embla-carousel-angular'
 import { DataService } from '../../services/data.service'
 
 @Component({
-  selector: 'app-home-carousel',
-  standalone: true,
-  imports: [EmblaCarouselDirective],
-  templateUrl: './home-carousel.component.html',
-  styleUrl: './home-carousel.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-home-carousel',
+    imports: [EmblaCarouselDirective],
+    templateUrl: './home-carousel.component.html',
+    styleUrl: './home-carousel.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeCarouselComponent {
   @ViewChild(EmblaCarouselDirective) private emblaRef?: EmblaCarouselDirective

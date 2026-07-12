@@ -3,12 +3,11 @@ import { ButtonComponent } from '../../../../shared/components/button/button.com
 import { DataService } from '../../services/data.service'
 
 @Component({
-  selector: 'app-home-contact',
-  standalone: true,
-  imports: [ButtonComponent],
-  templateUrl: './home-contact.component.html',
-  styleUrl: './home-contact.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-home-contact',
+    imports: [ButtonComponent],
+    templateUrl: './home-contact.component.html',
+    styleUrl: './home-contact.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeContactComponent {
   protected profile = inject(DataService).profile
