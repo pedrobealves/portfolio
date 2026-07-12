@@ -1,9 +1,8 @@
-export interface Education {
+export type Education = {
   name: string
   institution: string
   degree: string
   start: string
   end?: string
-  description?: string
   logo: string
 }

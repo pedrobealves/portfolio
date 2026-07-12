@@ -1,6 +1,6 @@
 <app-card type="row">
   @if(profile$ | async; as profile) { @for (social of
-  profile.socialMedias.links; track social.name) {
+  profile.socialLinks; track social.name) {
   <app-card-button [screws]="true">
     <a [href]="social.href" target="_blank" app-round-button size="big">
       <div class="round-btn__icon">

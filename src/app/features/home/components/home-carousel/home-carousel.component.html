@@ -1,12 +1,12 @@
 <div class="embla" emblaCarousel [options]="options">
   <div class="embla__container">
-    @for (project of projects$ | async; track project.name;) {
+    @for (project of projects$ | async; track project.title;) {
     <a
       class="embla__slide"
       [href]="project.site || project.github"
       target="_blank"
     >
-      <img [src]="project.image" [alt]="project.name" />
+      <img [src]="project.image" [alt]="project.title" />
     </a>
     }
   </div>

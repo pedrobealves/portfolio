@@ -1,14 +1,14 @@
-interface SocialMedia {
-  links: {
-    name: string
-    href: string
-    icon: string
-  }[]
+export type SocialLink = {
+  name: string
+  href: string
+  icon: string
 }
 
-export interface Profile {
+export type Profile = {
   name: string
-  description: string
   user: string
-  socialMedias: SocialMedia
+  description: string
+  email: string
+  repository: string
+  socialLinks: SocialLink[]
 }

@@ -2,23 +2,11 @@
   "name": "Pedro Bernardi",
   "user": "pedrobealves",
   "description": "FullStack Developer",
-  "socialMedias": {
-    "links": [
-      {
-        "name": "github",
-        "icon": "faBrandGithub",
-        "href": "https://github.com/pedrobealves"
-      },
-      {
-        "name": "twitter",
-        "icon": "faBrandXTwitter",
-        "href": "https://twitter.com/pedrobealves"
-      },
-      {
-        "name": "linkedin",
-        "icon": "faBrandLinkedinIn",
-        "href": "https://linkedin.com/in/pedro-bernardi-alves"
-      }
-    ]
-  }
+  "email": "pedrobealves@gmail.com",
+  "repository": "https://github.com/pedrobealves/portfolio",
+  "socialLinks": [
+    { "name": "github", "icon": "faBrandGithub", "href": "https://github.com/pedrobealves" },
+    { "name": "twitter", "icon": "faBrandXTwitter", "href": "https://twitter.com/pedrobealves" },
+    { "name": "linkedin", "icon": "faBrandLinkedinIn", "href": "https://linkedin.com/in/pedro-bernardi-alves" }
+  ]
 }
