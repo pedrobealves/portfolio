@@ -2,13 +2,13 @@
 
 Site de portfólio pessoal de página única.
 
-**Stack:** Angular 17 (standalone components), SCSS, Karma/Jasmine, embla-carousel-angular, angular-svg-icon.
+**Stack:** Angular 22 (standalone components, zoneless), SCSS, Vitest, embla-carousel-angular, angular-svg-icon.
 
 ## Comandos
 
 - `npm start` — servidor de desenvolvimento em http://localhost:4200
 - `npm run build` — build de produção em `dist/portfolio`
-- `npm test` — testes via Karma/Jasmine
+- `npm test` — testes via Vitest
 - `ng deploy` — publica no GitHub Pages
 
 ## Conteúdo
