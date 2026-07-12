@@ -1,0 +1,76 @@
+@use '_variables' as *;
+
+:host {
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.footer {
+  align-items: center;
+  display: flex;
+  gap: $padding;
+  grid-area: span 1 / span 3 / span 1 / span 3;
+
+  @media screen and (max-width: 991px) {
+    grid-area: span 1 / span 1 / span 1 / span 1;
+    justify-content: center;
+    padding-top: $padding;
+    padding-bottom: $padding;
+  }
+
+  &__bar {
+    height: 80%;
+    background-image: url('../../assets/images/bar.svg');
+    background-position: 0%;
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-attachment: scroll;
+    flex: 1;
+
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  &__link {
+    color: $smoke;
+    text-decoration: underline;
+  }
+
+  &__text {
+    color: $smoke;
+    font-weight: bolder;
+  }
+}
+
+.load-error {
+  color: $yellow;
+}
+
+.container {
+  width: 100%;
+  max-width: 98.68em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 3.33em 2.22em;
+  display: flex;
+}
+
+.grid {
+  grid-column-gap: $padding;
+  grid-row-gap: $padding;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+
+  @media screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router'
-import { HomeComponent } from './features/home/pages/home/home.component'
+import { Home } from './home/home'
 
 export const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: Home,
     title: 'Pedro Bernardi | Portfolio'
   }
 ]
