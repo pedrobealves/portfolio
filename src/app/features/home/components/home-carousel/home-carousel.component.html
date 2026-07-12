@@ -1,10 +1,20 @@
-<div class="embla" emblaCarousel [options]="options">
+<div
+  id="projects-carousel"
+  role="region"
+  aria-roledescription="carrossel"
+  aria-label="Projetos"
+  class="embla"
+  emblaCarousel
+  [options]="options"
+>
   <div class="embla__container">
     @for (project of projects(); track project.title) {
     <a
       class="embla__slide"
+      aria-roledescription="slide"
       [href]="project.site || project.github"
       target="_blank"
+      rel="noopener noreferrer"
     >
       <img [src]="project.image" [alt]="project.title" />
     </a>

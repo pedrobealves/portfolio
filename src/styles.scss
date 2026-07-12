@@ -90,6 +90,12 @@ a {
   text-decoration: none;
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 0.15em solid $yellow;
+  outline-offset: 0.15em;
+}
+
 .round-btn {
   &:hover & {
     &__icon {

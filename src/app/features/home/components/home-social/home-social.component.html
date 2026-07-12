@@ -1,15 +1,24 @@
 <app-card type="row">
-  @if (profile(); as profile) { @for (social of
-  profile.socialLinks; track social.name) {
-  <app-card-button [screws]="true">
-    <a [href]="social.href" target="_blank" app-round-button size="big">
-      <div class="round-btn__icon">
-        <ng-icon
-          class="round-btn__icon icon--purple"
-          [name]="social.icon"
-        ></ng-icon>
-      </div>
-    </a>
-  </app-card-button>
-  } }
+  <nav aria-label="Redes sociais" style="display: contents">
+    @if (profile(); as profile) { @for (social of
+    profile.socialLinks; track social.name) {
+    <app-card-button [screws]="true">
+      <a
+        [href]="social.href"
+        target="_blank"
+        rel="noopener noreferrer"
+        [attr.aria-label]="social.name"
+        app-round-button
+        size="big"
+      >
+        <div class="round-btn__icon">
+          <ng-icon
+            class="round-btn__icon icon--purple"
+            [name]="social.icon"
+          ></ng-icon>
+        </div>
+      </a>
+    </app-card-button>
+    } }
+  </nav>
 </app-card>

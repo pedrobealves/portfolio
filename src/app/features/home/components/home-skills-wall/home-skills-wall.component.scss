@@ -13,7 +13,7 @@
       margin-bottom: 1.11em;
       display: flex;
 
-      h3 {
+      h2 {
         color: $light-green;
         align-items: center;
         margin-right: 1.11em;
@@ -35,7 +35,7 @@
       gap: 0.5em;
     }
 
-    &__btn {
+    &__tag {
       display: flex;
       justify-content: center;
       gap: 0.5em;
@@ -46,7 +46,6 @@
       font-weight: bolder;
       color: $light-green;
       border-radius: $padding;
-      cursor: pointer;
       font-size: 0.9em;
 
       img {

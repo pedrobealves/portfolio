@@ -1,14 +1,28 @@
 <app-card>
   <div class="projects__head">
     <app-card-header title="projetos" icon="faSolidImage" />
-    <button type="button" app-round-button size="small" (click)="carousel.scrollPrev()">
+    <button
+      type="button"
+      app-round-button
+      size="small"
+      aria-label="Projeto anterior"
+      aria-controls="projects-carousel"
+      (click)="carousel.scrollPrev()"
+    >
       <div class="projects__icon">
-        <svg-icon src="assets/icons/arrow.svg"></svg-icon>
+        <svg-icon aria-hidden="true" src="assets/icons/arrow.svg"></svg-icon>
       </div>
     </button>
-    <button type="button" app-round-button size="small" (click)="carousel.scrollNext()">
+    <button
+      type="button"
+      app-round-button
+      size="small"
+      aria-label="Próximo projeto"
+      aria-controls="projects-carousel"
+      (click)="carousel.scrollNext()"
+    >
       <div class="projects__icon projects__icon--rotate">
-        <svg-icon src="assets/icons/arrow.svg"></svg-icon>
+        <svg-icon aria-hidden="true" src="assets/icons/arrow.svg"></svg-icon>
       </div>
     </button>
   </div>

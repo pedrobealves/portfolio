@@ -1,9 +1,9 @@
-<div class="container">
+<main class="container">
   <div class="grid">
     <app-home-panel-left class="main-grid" />
     <app-home-panel-center class="main-grid" />
     <app-home-panel-right class="main-grid" />
-    <div class="footer">
+    <footer class="footer">
       <div class="footer__bar"></div>
       <div class="footer__text">
         © {{ currentYear }} -
@@ -11,6 +11,7 @@
         <a
           class="footer__link"
           target="_blank"
+          rel="noopener noreferrer"
           [href]="profile.repository"
           >Github</a
         >
@@ -19,6 +20,6 @@
       @if (loadFailed()) {
       <p class="load-error" role="alert">Não foi possível carregar todo o conteúdo. Recarregue a página.</p>
       }
-    </div>
+    </footer>
   </div>
-</div>
+</main>

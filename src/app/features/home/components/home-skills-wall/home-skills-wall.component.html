@@ -1,11 +1,11 @@
 <div class="skills">
   <div class="skills__header">
-    <h3>Habilidades</h3>
+    <h2>Habilidades</h2>
     <div class="skills__line"></div>
   </div>
-  <ul class="skills__wrapper">
+  <ul class="skills__wrapper" role="list">
     @for (skill of skills(); track skill.name) {
-    <li class="skills__btn">
+    <li class="skills__tag">
       <img
         [src]="iconUrl(skill)"
         alt="Ícone da habilidade {{ skill.name }}"
