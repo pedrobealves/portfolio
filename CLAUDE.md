@@ -22,6 +22,10 @@ Files and classes follow the v20+ style guide: no `Component`/`Service` type suf
 
 All portfolio content (profile, education, skills, projects) lives in `src/assets/*.json`, typed by the models in `src/app/home/models/`, and fetched by `PortfolioContent` (`src/app/home/portfolio-content.ts`). It wraps one `httpResource` per JSON file and exposes `profile`, `educations`, `skills`, `projects` — each with `value()` (typed fallback while loading or on error), `error()` and `reload()` — plus a `loadFailed` computed and `retry()`, which reloads only the failed resources. Components read `x.value()` directly in templates (no `AsyncPipe`); on failure the home page shows a "Tentar novamente" retry button. To change displayed content, edit the JSON — not templates. Content text is in Portuguese.
 
+### Internationalization
+
+The site ships two locales via `@angular/localize`: source `pt-BR` at `/` and `en` at `/en/` (see the `i18n` block in `angular.json`; the production build sets `localize: true`). Per-locale content lives in `src/assets/i18n/<locale>/*.json` (folders named exactly `pt-BR` and `en`, matching `LOCALE_ID`); `PortfolioContent` builds fetch URLs from the injected `LOCALE_ID`. Fixed UI chrome uses `i18n` template markers extracted with `npx ng extract-i18n --output-path src/locale --format xlf` and translated in `src/locale/messages.en.xlf` (add a `<target>` per unit). Page `<title>`/meta and the language switch are runtime, keyed by `LOCALE_ID` (see `app.ts`, `home-header.ts`). `npm run build` emits both locales under `dist/portfolio/browser/` (root = pt-BR, `en/` = English). Do not set `baseHref` on the deploy target — `subPath` handles per-locale base hrefs.
+
 ### Component structure
 
 - `home/` — the page (`home.ts`/`.html`/`.scss`), `portfolio-content.ts`, `models/`
