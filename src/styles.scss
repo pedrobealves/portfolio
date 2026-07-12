@@ -142,3 +142,24 @@ button:focus-visible {
   align-items: center;
   display: flex;
 }
+
+.detail {
+  &__period {
+    color: $green;
+    margin-bottom: 0.6em;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+    margin-bottom: 0.8em;
+    li {
+      list-style: disc;
+      margin-left: 1.2em;
+    }
+  }
+  &__tech {
+    color: $white-purple;
+    font-size: 0.85em;
+  }
+}

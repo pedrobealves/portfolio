@@ -1,0 +1,33 @@
+<app-card>
+  <app-card-header title="Experiência" i18n-title="@@experienceTitle" icon="faSolidBriefcase" />
+  <div class="container">
+    @for (experience of experiences.value(); track experience.company) {
+    <app-card-button>
+      <button
+        type="button"
+        class="role"
+        [attr.aria-label]="experience.role + ' — ' + experience.company"
+        (click)="selected.set(experience)"
+      >
+        <ng-icon class="icon--yellow" [name]="experience.icon" />
+      </button>
+    </app-card-button>
+    }
+  </div>
+</app-card>
+
+<app-detail-dialog
+  [open]="selected() !== null"
+  [title]="(selected()?.role ?? '') + ' — ' + (selected()?.company ?? '')"
+  (closed)="selected.set(null)"
+>
+  @if (selected(); as experience) {
+  <p class="detail__period">{{ experience.period }}</p>
+  <ul class="detail__list">
+    @for (achievement of experience.achievements; track achievement) {
+    <li>{{ achievement }}</li>
+    }
+  </ul>
+  <p class="detail__tech">{{ experience.technologies.join(' · ') }}</p>
+  }
+</app-detail-dialog>

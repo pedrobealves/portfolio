@@ -1,0 +1,23 @@
+@use '_variables' as *;
+
+:host {
+  display: flex;
+  width: 100%;
+
+  .container {
+    display: grid;
+    gap: $padding;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .role {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: $radius-pill;
+    width: 6.5em;
+    height: 6.5em;
+    border: 0.3em solid $soft-purple;
+    cursor: pointer;
+  }
+}

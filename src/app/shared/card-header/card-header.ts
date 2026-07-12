@@ -5,14 +5,14 @@ import {
   provideIcons,
   provideNgIconsConfig
 } from '@ng-icons/core'
-import { faSolidImage } from '@ng-icons/font-awesome/solid'
+import { faSolidImage, faSolidBriefcase } from '@ng-icons/font-awesome/solid'
 import { remixGraduationCapFill } from '@ng-icons/remixicon'
 import { SvgIconComponent } from 'angular-svg-icon'
 
 @Component({
     selector: 'app-card-header',
     imports: [NgIconComponent, SvgIconComponent],
-    viewProviders: [provideIcons({ faSolidImage, remixGraduationCapFill })],
+    viewProviders: [provideIcons({ faSolidImage, faSolidBriefcase, remixGraduationCapFill })],
     providers: [
         provideNgIconsConfig({
             size: '1.56em'

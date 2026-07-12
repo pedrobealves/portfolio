@@ -18,6 +18,10 @@
         <source>Fechar</source>
         <target>Close</target>
       </trans-unit>
+      <trans-unit id="experienceTitle" datatype="html">
+        <source>Experiência</source>
+        <target>Experience</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

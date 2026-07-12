@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "role": "AI Engineer",
+    "company": "Meerkat Coding",
+    "period": "May 2024 – present",
+    "icon": "faSolidRobot",
+    "achievements": [
+      "Automated OCR pipeline (capture, classification, validation) for high-volume financial and identity documents, orchestrating AI agents with layered inference, async queues, retry/fallback and end-to-end observability — 100% accuracy on critical fields, >95% on inferred data, and -80% processing time.",
+      "Generative-AI application for executive meeting moderation: multi-agent system with streaming audio, cross-agent context, real-time summarization and structured persistence of the discussion."
+    ],
+    "technologies": ["Python", "LangChain", "LangGraph", "LLMOps", "RAG", "FastAPI", "AWS", "Kubernetes"]
+  },
+  {
+    "role": "Full Stack Engineer",
+    "company": "Freelancer",
+    "period": "Nov 2019 – Nov 2023",
+    "icon": "faSolidBriefcase",
+    "achievements": [
+      "News portal with server-side rendering, in-memory caching and technical SEO — averaging 50K organic monthly visits.",
+      "Commercial site serving 200K+ monthly users, with distributed caching, lazy loading and end-to-end observability."
+    ],
+    "technologies": ["TypeScript", "Node.js", "NestJS", "React", "Next.js", "PostgreSQL"]
+  }
+]
