@@ -16,7 +16,7 @@
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img [src]="project.image" [alt]="project.title" />
+      <img [ngSrc]="project.image" [alt]="project.title" fill [priority]="$first" />
     </a>
     }
   </div>
