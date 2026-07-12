@@ -1,6 +1,7 @@
 import { provideHttpClient, withXhr } from '@angular/common/http'
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing'
 import { TestBed } from '@angular/core/testing'
+import { vi } from 'vitest'
 import { DataService } from './data.service'
 
 const CONTENT_FILES = ['profile.json', 'education.json', 'skills.json', 'projects.json']
@@ -36,11 +37,11 @@ describe('DataService', () => {
   })
 
   it('falls back to empty content and flags failure when a request errors', () => {
-    spyOn(console, 'error')
+    vi.spyOn(console, 'error')
     http.expectOne('assets/skills.json').flush('erro', { status: 500, statusText: 'Server Error' })
     flushAllExcept('skills.json')
     expect(service.skills()).toEqual([])
-    expect(service.loadFailed()).toBeTrue()
+    expect(service.loadFailed()).toBe(true)
     expect(console.error).toHaveBeenCalled()
   })
 })
