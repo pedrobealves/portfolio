@@ -4,7 +4,7 @@
     <div class="skills__line"></div>
   </div>
   <ul class="skills__wrapper" role="list">
-    @for (skill of skills(); track skill.name) {
+    @for (skill of skills.value(); track skill.name) {
     <li class="skills__tag">
       <img
         [src]="iconUrl(skill)"

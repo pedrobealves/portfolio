@@ -1,33 +1,47 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http'
-import { Injectable, Signal, inject, signal } from '@angular/core'
-import { toSignal } from '@angular/core/rxjs-interop'
-import { catchError, of } from 'rxjs'
+import { httpResource } from '@angular/common/http'
+import { Injectable, Signal, computed, effect } from '@angular/core'
 import { Education } from '../models/education.model'
 import { Profile } from '../models/profile.model'
 import { Project } from '../models/project.model'
 import { Skill } from '../models/skill.model'
 
+type ContentResource<T> = {
+  value: Signal<T>
+  error: Signal<unknown>
+  reload(): boolean
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  private http = inject(HttpClient)
-  private failed = signal(false)
+  readonly profile = this.contentResource<Profile | undefined>('profile.json', undefined)
+  readonly educations = this.contentResource<Education[]>('education.json', [])
+  readonly skills = this.contentResource<Skill[]>('skills.json', [])
+  readonly projects = this.contentResource<Project[]>('projects.json', [])
 
-  readonly loadFailed = this.failed.asReadonly()
-  readonly profile = this.fetchJson<Profile | undefined>('profile.json', undefined)
-  readonly educations = this.fetchJson<Education[]>('education.json', [])
-  readonly skills = this.fetchJson<Skill[]>('skills.json', [])
-  readonly projects = this.fetchJson<Project[]>('projects.json', [])
+  private readonly contents = [this.profile, this.educations, this.skills, this.projects]
 
-  private fetchJson<T>(file: string, fallback: T): Signal<T> {
-    const content$ = this.http.get<T>(`assets/${file}`).pipe(
-      catchError((error: HttpErrorResponse) => {
-        console.error(`Falha ao carregar ${file}`, error)
-        this.failed.set(true)
-        return of(fallback)
-      })
-    )
-    return toSignal(content$, { initialValue: fallback })
+  readonly loadFailed = computed(() => this.contents.some((content) => content.error() !== undefined))
+
+  constructor() {
+    effect(() => {
+      this.contents
+        .filter((content) => content.error() !== undefined)
+        .forEach((content) => console.error('Falha ao carregar conteúdo', content.error()))
+    })
+  }
+
+  retry() {
+    this.contents.filter((content) => content.error() !== undefined).forEach((content) => content.reload())
+  }
+
+  private contentResource<T>(file: string, fallback: T): ContentResource<T> {
+    const resource = httpResource<T>(() => `assets/${file}`)
+    return {
+      value: computed(() => (resource.hasValue() ? resource.value() : fallback)),
+      error: resource.error,
+      reload: () => resource.reload()
+    }
   }
 }

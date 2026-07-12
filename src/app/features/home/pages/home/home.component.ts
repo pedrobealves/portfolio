@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core'
 import { HomePanelLeftComponent } from '../../components/home-panel-left/home-panel-left.component'
 import { HomePanelCenterComponent } from '../../components/home-panel-center/home-panel-center.component'
 import { HomePanelRightComponent } from '../../components/home-panel-right/home-panel-right.component'
+import { ButtonComponent } from '../../../../shared/components/button/button.component'
 import { DataService } from '../../services/data.service'
 
 @Component({
@@ -9,7 +10,8 @@ import { DataService } from '../../services/data.service'
     imports: [
         HomePanelLeftComponent,
         HomePanelCenterComponent,
-        HomePanelRightComponent
+        HomePanelRightComponent,
+        ButtonComponent
     ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss',
@@ -20,4 +22,8 @@ export class HomeComponent {
   protected profile = this.data.profile
   protected loadFailed = this.data.loadFailed
   currentYear: number = new Date().getFullYear()
+
+  protected retry() {
+    this.data.retry()
+  }
 }

@@ -1,6 +1,6 @@
 <app-card type="row">
   <nav aria-label="Redes sociais" style="display: contents">
-    @if (profile(); as profile) { @for (social of
+    @if (profile.value(); as profile) { @for (social of
     profile.socialLinks; track social.name) {
     <app-card-button [screws]="true">
       <a

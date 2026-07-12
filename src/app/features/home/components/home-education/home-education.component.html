@@ -4,7 +4,7 @@
     icon="remixGraduationCapFill"
   ></app-card-header>
   <div class="container">
-    @for (education of educations(); track education.name) {
+    @for (education of educations.value(); track education.name) {
     <app-card-button>
       <div class="container__frame">
         <img

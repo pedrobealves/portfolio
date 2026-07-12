@@ -8,7 +8,7 @@
   [options]="options"
 >
   <div class="embla__container">
-    @for (project of projects(); track project.title) {
+    @for (project of projects.value(); track project.title) {
     <a
       class="embla__slide"
       aria-roledescription="slide"

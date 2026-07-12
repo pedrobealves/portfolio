@@ -7,7 +7,7 @@
       <div class="footer__bar"></div>
       <div class="footer__text">
         © {{ currentYear }} -
-        @if (profile(); as profile) {
+        @if (profile.value(); as profile) {
         <a
           class="footer__link"
           target="_blank"
@@ -18,7 +18,10 @@
         }
       </div>
       @if (loadFailed()) {
-      <p class="load-error" role="alert">Não foi possível carregar todo o conteúdo. Recarregue a página.</p>
+      <p class="load-error" role="alert">
+        Não foi possível carregar todo o conteúdo.
+        <button type="button" app-button (click)="retry()">Tentar novamente</button>
+      </p>
       }
     </footer>
   </div>

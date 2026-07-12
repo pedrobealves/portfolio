@@ -1,6 +1,6 @@
 <header class="header">
   <img src="assets/images/logo.svg" alt="" class="header__logo" />
-  @if (profile(); as profile) {
+  @if (profile.value(); as profile) {
   <h1 class="header__title">{{ profile.name }}</h1>
   }
   <img src="assets/images/dots-header.png" alt="" class="header__dots" />
