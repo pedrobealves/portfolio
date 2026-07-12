@@ -1,29 +1,25 @@
-import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import { TestBed } from '@angular/core/testing'
+import { RouterTestingHarness } from '@angular/router/testing'
+import { AppComponent } from './app.component'
+import { appConfig } from './app.config'
+import { HomeComponent } from './features/home/pages/home/home.component'
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AppComponent],
-    }).compileComponents();
-  });
+      providers: appConfig.providers,
+    }).compileComponents()
+  })
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+  it('creates the app', () => {
+    const fixture = TestBed.createComponent(AppComponent)
+    expect(fixture.componentInstance).toBeTruthy()
+  })
 
-  it(`should have the 'portfolio' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('portfolio');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, portfolio');
-  });
-});
+  it('renders the home page on the root route', async () => {
+    const harness = await RouterTestingHarness.create()
+    const home = await harness.navigateByUrl('/', HomeComponent)
+    expect(home).toBeTruthy()
+  })
+})
