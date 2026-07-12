@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core'
+import { By } from '@angular/platform-browser'
 import { TestBed } from '@angular/core/testing'
 import { DetailDialog } from './detail-dialog'
 
@@ -32,5 +33,31 @@ describe('DetailDialog', () => {
     button.click()
     fixture.detectChanges()
     expect(fixture.componentInstance.open()).toBe(false)
+  })
+
+  it('emits closed exactly once when the close button is clicked', () => {
+    const fixture = TestBed.createComponent(Host)
+    fixture.componentInstance.open.set(true)
+    fixture.detectChanges()
+    const dialog = fixture.debugElement.query(By.directive(DetailDialog)).componentInstance as DetailDialog
+    let emissions = 0
+    dialog.closed.subscribe(() => (emissions += 1))
+    const button = fixture.nativeElement.querySelector('.dialog__close') as HTMLButtonElement
+    button.click()
+    fixture.detectChanges()
+    expect(emissions).toBe(1)
+  })
+
+  it('emits closed exactly once when the backdrop is clicked', () => {
+    const fixture = TestBed.createComponent(Host)
+    fixture.componentInstance.open.set(true)
+    fixture.detectChanges()
+    const dialog = fixture.debugElement.query(By.directive(DetailDialog)).componentInstance as DetailDialog
+    let emissions = 0
+    dialog.closed.subscribe(() => (emissions += 1))
+    const element = fixture.nativeElement.querySelector('dialog') as HTMLDialogElement
+    element.dispatchEvent(new MouseEvent('click', { bubbles: true }))
+    fixture.detectChanges()
+    expect(emissions).toBe(1)
   })
 })

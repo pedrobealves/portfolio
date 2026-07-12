@@ -34,6 +34,7 @@ export class DetailDialog {
   }
 
   protected onBackdrop(event: MouseEvent): void {
-    if (event.target === this.dialog().nativeElement) this.closed.emit()
+    const element = this.dialog().nativeElement
+    if (event.target === element) element.close()
   }
 }
