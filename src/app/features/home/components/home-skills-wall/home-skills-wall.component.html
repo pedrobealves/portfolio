@@ -7,7 +7,7 @@
     @for (skill of skills(); track skill.name) {
     <li class="skills__btn">
       <img
-        [src]="'https://cdn.simpleicons.org/' + skill.name + '/62FD85'"
+        [src]="iconUrl(skill)"
         alt="Ícone da habilidade {{ skill.name }}"
       />
       {{ skill.name }}
