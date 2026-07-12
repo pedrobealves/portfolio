@@ -47,3 +47,5 @@ Thumbs.db
 .claude/settings.local.json
 .claude/skills/
 docs/superpowers/
+.nx/cache
+.nx/workspace-data
