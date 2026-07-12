@@ -4,7 +4,6 @@ import { CardHeaderComponent } from '../../../../shared/components/card-header/c
 import { RoundLinkComponent } from '../../../../shared/components/round-link/round-link.component'
 import { CardButtonComponent } from '../../../../shared/components/card-button/card-button.component'
 import { DataService } from '../../services/data.service'
-import { AsyncPipe } from '@angular/common'
 import { SvgIconComponent } from 'angular-svg-icon'
 
 @Component({
@@ -15,13 +14,11 @@ import { SvgIconComponent } from 'angular-svg-icon'
     CardHeaderComponent,
     RoundLinkComponent,
     CardButtonComponent,
-    AsyncPipe,
     SvgIconComponent
   ],
   templateUrl: './home-education.component.html',
   styleUrl: './home-education.component.scss'
 })
 export class HomeEducationComponent {
-  private dataService = inject(DataService)
-  public educations$ = this.dataService.getEducation()
+  protected educations = inject(DataService).educations
 }

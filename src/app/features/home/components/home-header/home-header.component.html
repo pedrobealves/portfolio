@@ -1,6 +1,6 @@
 <div class="header">
   <img src="assets/images/logo.svg" alt="logo" class="header__logo" />
-  @if(profile$ | async; as profile) {
+  @if (profile(); as profile) {
   <h1 class="header__title">{{ profile.name }}</h1>
   }
   <img src="assets/images/dots-header.png" alt="dots" class="header__dots" />

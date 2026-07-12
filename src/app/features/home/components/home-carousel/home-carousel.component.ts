@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common'
 import {
   AfterViewInit,
   Component,
@@ -17,13 +16,12 @@ import { DataService } from '../../services/data.service'
 @Component({
   selector: 'app-home-carousel',
   standalone: true,
-  imports: [EmblaCarouselDirective, CommonModule],
+  imports: [EmblaCarouselDirective],
   templateUrl: './home-carousel.component.html',
   styleUrl: './home-carousel.component.scss'
 })
 export class HomeCarouselComponent implements AfterViewInit {
-  private dataService = inject(DataService)
-  public projects$ = this.dataService.getProjects()
+  protected projects = inject(DataService).projects
 
   @ViewChild(EmblaCarouselDirective)
   emalaRef: EmblaCarouselDirective = new EmblaCarouselDirective()

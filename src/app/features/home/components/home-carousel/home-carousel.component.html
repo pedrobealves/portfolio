@@ -1,6 +1,6 @@
 <div class="embla" emblaCarousel [options]="options">
   <div class="embla__container">
-    @for (project of projects$ | async; track project.title;) {
+    @for (project of projects(); track project.title) {
     <a
       class="embla__slide"
       [href]="project.site || project.github"

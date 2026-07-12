@@ -7,13 +7,18 @@
       <div class="footer__bar"></div>
       <div class="footer__text">
         © {{ currentYear }} -
+        @if (profile(); as profile) {
         <a
           class="footer__link"
           target="_blank"
-          href="https://github.com/pedrobealves/portfolio"
+          [href]="profile.repository"
           >Github</a
         >
+        }
       </div>
+      @if (loadFailed()) {
+      <p class="load-error" role="alert">Não foi possível carregar todo o conteúdo. Recarregue a página.</p>
+      }
     </div>
   </div>
 </div>

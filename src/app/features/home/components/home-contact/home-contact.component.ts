@@ -1,5 +1,6 @@
-import { Component } from '@angular/core'
+import { Component, inject } from '@angular/core'
 import { ButtonComponent } from '../../../../shared/components/button/button.component'
+import { DataService } from '../../services/data.service'
 
 @Component({
   selector: 'app-home-contact',
@@ -8,4 +9,6 @@ import { ButtonComponent } from '../../../../shared/components/button/button.com
   templateUrl: './home-contact.component.html',
   styleUrl: './home-contact.component.scss'
 })
-export class HomeContactComponent {}
+export class HomeContactComponent {
+  protected profile = inject(DataService).profile
+}

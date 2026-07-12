@@ -4,7 +4,7 @@
     <div class="skills__line"></div>
   </div>
   <ul class="skills__wrapper">
-    @for (skill of skills$ | async; track skill.name) {
+    @for (skill of skills(); track skill.name) {
     <li class="skills__btn">
       <img
         [src]="'https://cdn.simpleicons.org/' + skill.name + '/62FD85'"

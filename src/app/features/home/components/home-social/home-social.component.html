@@ -1,5 +1,5 @@
 <app-card type="row">
-  @if(profile$ | async; as profile) { @for (social of
+  @if (profile(); as profile) { @for (social of
   profile.socialLinks; track social.name) {
   <app-card-button [screws]="true">
     <a [href]="social.href" target="_blank" app-round-button size="big">
