@@ -15,7 +15,7 @@ Linting: `npm run lint` (angular-eslint; flat config in `eslint.config.js` — c
 
 ## Architecture
 
-Single-page portfolio site: one route (`''` → `HomeComponent`). Angular 21 with standalone components only — no NgModules. Bootstrap providers (router, `provideHttpClient`, `provideAngularSvgIcon`) live in `src/app/app.config.ts`.
+Single-page portfolio site: one route (`''` → `HomeComponent`). Angular 22 with standalone components only — no NgModules. Bootstrap providers (router, `provideHttpClient`, `provideAngularSvgIcon`) live in `src/app/app.config.ts`.
 
 ### Data-driven content
 
