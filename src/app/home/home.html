@@ -18,7 +18,7 @@
         }
       </div>
       @if (loadFailed()) {
-      <p class="load-error" role="alert">
+      <p class="load-error" role="alert" i18n="@@loadError">
         Não foi possível carregar todo o conteúdo.
         <button type="button" app-button (click)="retry()">Tentar novamente</button>
       </p>

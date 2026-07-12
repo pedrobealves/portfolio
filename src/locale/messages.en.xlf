@@ -2,9 +2,45 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="pt-BR" target-language="en" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="contactCta" datatype="html">
+        <source>Contato</source>
+        <target>Contact</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/components/home-contact/home-contact.html</context>
+          <context context-type="linenumber">11,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="educationTitle" datatype="html">
+        <source>Educação</source>
+        <target>Education</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/components/home-education/home-education.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experienceTitle" datatype="html">
+        <source>Experiência</source>
+        <target>Experience</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/components/home-experience/home-experience.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="switchLanguage" datatype="html">
         <source>Trocar idioma</source>
         <target>Switch language</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/components/home-header/home-header.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projectsTitle" datatype="html">
+        <source>projetos</source>
+        <target>projects</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/components/home-projects/home-projects.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="skillsTitle" datatype="html">
         <source>Habilidades</source>
@@ -14,17 +50,21 @@
           <context context-type="linenumber">3,4</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="loadError" datatype="html">
+        <source> Não foi possível carregar todo o conteúdo. <x id="START_TAG_BUTTON" ctype="x-button" equiv-text="&lt;button type=&quot;button&quot; app-button (click)=&quot;retry()&quot;&gt;"/>Tentar novamente<x id="CLOSE_TAG_BUTTON" ctype="x-button" equiv-text="&lt;/button&gt;"/></source>
+        <target> Some content failed to load. <x id="START_TAG_BUTTON" ctype="x-button" equiv-text="&lt;button type=&quot;button&quot; app-button (click)=&quot;retry()&quot;&gt;"/>Try again<x id="CLOSE_TAG_BUTTON" ctype="x-button" equiv-text="&lt;/button&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.html</context>
+          <context context-type="linenumber">22,26</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="dialogClose" datatype="html">
         <source>Fechar</source>
         <target>Close</target>
-      </trans-unit>
-      <trans-unit id="experienceTitle" datatype="html">
-        <source>Experiência</source>
-        <target>Experience</target>
-      </trans-unit>
-      <trans-unit id="educationTitle" datatype="html">
-        <source>Educação</source>
-        <target>Education</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/detail-dialog/detail-dialog.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
       </trans-unit>
     </body>
   </file>
