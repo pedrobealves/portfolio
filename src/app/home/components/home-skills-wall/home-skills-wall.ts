@@ -16,6 +16,11 @@ export class HomeSkillsWall {
   protected skills = inject(PortfolioContent).skills
 
   protected iconUrl(skill: Skill): string {
-    return `${SKILL_ICON_CDN}/${skill.logo ?? skill.name}/${SKILL_ICON_COLOR}`
+    const slug = (skill.logo ?? skill.name).toLowerCase()
+    return `${SKILL_ICON_CDN}/${slug}/${SKILL_ICON_COLOR}`
+  }
+
+  protected hideIcon(event: Event): void {
+    ;(event.target as HTMLImageElement).style.display = 'none'
   }
 }

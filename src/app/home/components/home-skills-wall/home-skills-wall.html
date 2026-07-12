@@ -9,6 +9,7 @@
       <img
         [src]="iconUrl(skill)"
         alt="Ícone da habilidade {{ skill.name }}"
+        (error)="hideIcon($event)"
       />
       {{ skill.name }}
       <div></div>
