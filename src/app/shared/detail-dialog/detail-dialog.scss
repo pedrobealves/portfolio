@@ -1,0 +1,41 @@
+@use '_variables' as *;
+
+.dialog {
+  border: 0;
+  background: transparent;
+  color: $smoke;
+  max-width: 32em;
+  width: 90vw;
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  &__panel {
+    background-color: $medium-purple;
+    border: 0.08em solid $soft-purple;
+    border-radius: $border-radius;
+    padding: $padding;
+  }
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: $padding;
+    margin-bottom: $padding;
+  }
+  &__title {
+    font-size: 1em;
+    color: $green;
+  }
+  &__close {
+    font-size: 1.4em;
+    line-height: 1;
+    cursor: pointer;
+    color: $smoke;
+  }
+  &__body {
+    font-size: 0.8em;
+    text-transform: none;
+    letter-spacing: 0.03em;
+    line-height: 1.4;
+  }
+}

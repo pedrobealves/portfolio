@@ -14,6 +14,10 @@
           <context context-type="linenumber">3,4</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="dialogClose" datatype="html">
+        <source>Fechar</source>
+        <target>Close</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

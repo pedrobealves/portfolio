@@ -1,0 +1,20 @@
+<!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
+<dialog #dialog class="dialog" (close)="closed.emit()" (click)="onBackdrop($event)">
+  <div class="dialog__panel">
+    <div class="dialog__head">
+      <h3 class="dialog__title">{{ title() }}</h3>
+      <button
+        type="button"
+        class="dialog__close"
+        aria-label="Fechar"
+        i18n-aria-label="@@dialogClose"
+        (click)="closed.emit()"
+      >
+        &times;
+      </button>
+    </div>
+    <div class="dialog__body">
+      <ng-content />
+    </div>
+  </div>
+</dialog>
