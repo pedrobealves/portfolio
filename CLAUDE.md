@@ -11,11 +11,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `ng test --include='**/app.component.spec.ts'` — run a single spec file
 - `ng deploy` — publish to GitHub Pages (angular-cli-ghpages)
 
-Linting: `npm run lint` (angular-eslint; config in `.eslintrc.json` — component selectors may be `element` or `attribute` with the `app` prefix, matching the shared button primitives). Component schematics set `skipTests: true`, so `ng generate component` creates no spec files; the existing specs are `app.component.spec.ts` and `data.service.spec.ts`. CI (`.github/workflows/ci.yml`) runs lint, `npm run build`, and the headless test command on every push to `main` and on pull requests.
+Linting: `npm run lint` (angular-eslint; flat config in `eslint.config.js` — component selectors may be `element` or `attribute` with the `app` prefix, matching the shared button primitives). Component schematics set `skipTests: true`, so `ng generate component` creates no spec files; the existing specs are `app.component.spec.ts` and `data.service.spec.ts`. CI (`.github/workflows/ci.yml`) runs lint, `npm run build`, and the headless test command on every push to `main` and on pull requests.
 
 ## Architecture
 
-Single-page portfolio site: one route (`''` → `HomeComponent`). Angular 17 with standalone components only — no NgModules. Bootstrap providers (router, `provideHttpClient`, `provideAngularSvgIcon`) live in `src/app/app.config.ts`.
+Single-page portfolio site: one route (`''` → `HomeComponent`). Angular 21 with standalone components only — no NgModules. Bootstrap providers (router, `provideHttpClient`, `provideAngularSvgIcon`) live in `src/app/app.config.ts`.
 
 ### Data-driven content
 
