@@ -4,7 +4,7 @@
   cursor: pointer;
   margin-top: -0.5em;
   overflow: hidden;
-  border-radius: 100em;
+  border-radius: $radius-pill;
 
   &--big {
     min-height: 7em;
@@ -43,9 +43,9 @@
     align-items: center;
     transition: box-shadow 0.1s, transform 0.1s;
     display: flex;
-    border-radius: 100em;
-    padding-left: 1.11em;
-    padding-right: 1.11em;
+    border-radius: $radius-pill;
+    padding-left: $padding;
+    padding-right: $padding;
 
     &--small {
       min-height: 3.54em;

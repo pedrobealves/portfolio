@@ -10,13 +10,13 @@
     &__header {
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 1.11em;
+      margin-bottom: $padding;
       display: flex;
 
       h2 {
         color: $light-green;
         align-items: center;
-        margin-right: 1.11em;
+        margin-right: $padding;
         display: flex;
       }
     }
@@ -24,7 +24,7 @@
     &__line {
       height: 0.3em;
       background-color: $green;
-      border-radius: 100em;
+      border-radius: $radius-pill;
       flex: 1;
     }
 
@@ -45,7 +45,7 @@
       text-transform: uppercase;
       font-weight: bolder;
       color: $light-green;
-      border-radius: $padding;
+      border-radius: $radius-pill;
       font-size: 0.9em;
 
       img {
@@ -60,7 +60,6 @@
       }
 
       &:hover {
-        background-color: $black-green;
         color: $neutral-50;
 
         img {

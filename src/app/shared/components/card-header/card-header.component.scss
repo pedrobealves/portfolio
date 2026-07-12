@@ -5,7 +5,7 @@
 
   .header {
     background-color: $dark-purple;
-    border-radius: 0.56em;
+    border-radius: $radius-md;
     justify-content: space-between;
     align-items: center;
     padding: $padding;
@@ -20,7 +20,7 @@
     &__icon {
       width: 3.87em;
       height: 3.87em;
-      background-color: var(--dark-black);
+      background-color: $black;
       border-radius: 0.42em;
       justify-content: center;
       align-items: center;

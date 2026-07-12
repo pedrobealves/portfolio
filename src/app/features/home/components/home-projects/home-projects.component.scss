@@ -12,7 +12,7 @@
     &__carousel {
       min-height: 20em;
       background-color: $purple;
-      border-radius: 0.83em;
+      border-radius: $border-radius;
       padding: 0.9em;
       position: relative;
       overflow: hidden;

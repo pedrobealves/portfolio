@@ -32,7 +32,6 @@ import {
     })
   ],
   templateUrl: './home-social.component.html',
-  styleUrl: './home-social.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeSocialComponent {

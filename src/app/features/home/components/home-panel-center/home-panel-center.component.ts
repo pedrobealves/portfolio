@@ -8,7 +8,6 @@ import { HomeBarsComponent } from '../home-bars/home-bars.component'
   standalone: true,
   imports: [HomeSocialComponent, HomeProjectsComponent, HomeBarsComponent],
   template: ` <app-home-social /> <app-home-projects /> <app-home-bars />`,
-  styleUrl: './home-panel-center.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomePanelCenterComponent {}

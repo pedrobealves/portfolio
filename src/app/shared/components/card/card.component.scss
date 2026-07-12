@@ -6,9 +6,9 @@
   height: 100%;
   .card {
     width: 100%;
-    border: 1px solid $medium-purple;
+    border: 0.08em solid $medium-purple;
     background-color: $medium-purple;
-    border-radius: 0.83em;
+    border-radius: $border-radius;
     transition: border-color 0.2s, background-color 0.2s;
     position: relative;
 
@@ -26,16 +26,6 @@
       gap: $padding;
     }
 
-    &__header {
-      width: 100%;
-      background-color: $dark-purple;
-      border-radius: 0.56em;
-      justify-content: space-between;
-      align-items: center;
-      padding: $padding;
-      transition: background-color 0.1s;
-      display: flex;
-    }
   }
 
   .row {

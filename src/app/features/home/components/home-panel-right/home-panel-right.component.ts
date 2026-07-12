@@ -7,7 +7,6 @@ import { HomeSoundComponent } from '../home-sound/home-sound.component'
   standalone: true,
   imports: [HomeEducationComponent, HomeSoundComponent],
   template: ` <app-home-education /> <app-home-sound /> `,
-  styleUrl: './home-panel-right.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomePanelRightComponent {}
