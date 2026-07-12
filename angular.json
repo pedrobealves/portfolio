@@ -91,7 +91,8 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/portfolio/"
+            "baseHref": "/",
+            "cname": "pedrobernardi.com"
           }
         },
         "lint": {
@@ -105,5 +106,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "c345aaee-f0b9-4962-8f0f-38f042c729f0"
   }
 }
