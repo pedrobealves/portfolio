@@ -14,15 +14,34 @@
       margin-right: $padding;
       color: $black-green;
     }
+    &__titles {
+      display: flex;
+      flex-direction: column;
+    }
     &__title {
       font-size: 1.1em;
       font-weight: bolder;
       color: $black-green;
     }
-    &__dots {
-      width: 4em;
-      object-fit: contain;
+    &__subtitle {
+      font-size: 0.62em;
+      color: $black-green;
+      text-transform: none;
+      letter-spacing: 0.04em;
+      margin-top: 0.2em;
+    }
+    &__lang {
       margin-left: auto;
+      font-size: 0.8em;
+      font-weight: bolder;
+      color: $black-green;
+      padding: 0.2em 0.6em;
+      border: 0.15em solid $black-green;
+      border-radius: $radius-pill;
+      &:hover {
+        color: $dark-green;
+        border-color: $dark-green;
+      }
     }
   }
 }

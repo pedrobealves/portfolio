@@ -2,6 +2,10 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="pt-BR" target-language="en" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="switchLanguage" datatype="html">
+        <source>Trocar idioma</source>
+        <target>Switch language</target>
+      </trans-unit>
       <trans-unit id="skillsTitle" datatype="html">
         <source>Habilidades</source>
         <target>Skills</target>

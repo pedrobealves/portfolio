@@ -2,6 +2,13 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="pt-BR" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="switchLanguage" datatype="html">
+        <source>Trocar idioma</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/components/home-header/home-header.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="skillsTitle" datatype="html">
         <source>Habilidades</source>
         <context-group purpose="location">
