@@ -1,18 +1,29 @@
 [
   {
-    "name": "Bacharelado em Engenharia de Computação",
-    "start": "2019",
-    "degree": "Graduação",
-    "end": "2025",
+    "name": "Pós-graduação em IA Generativa Aplicada",
+    "degree": "Especialização (Lato Sensu)",
     "institution": "UTFPR",
-    "logo": "assets/images/utfpr.svg"
+    "start": "2026",
+    "end": "2028",
+    "logo": "assets/images/utfpr.svg",
+    "description": "Ciclo completo de IA generativa: LLMOps, RAG e fine-tuning (LoRA/PEFT), agentes autônomos com LangGraph, avaliação com RAGAs e TruLens, e governança (NIST AI RMF, EU AI Act). Em andamento."
+  },
+  {
+    "name": "Bacharelado em Engenharia de Computação",
+    "degree": "Graduação",
+    "institution": "UTFPR",
+    "start": "2017",
+    "end": "2025",
+    "logo": "assets/images/utfpr.svg",
+    "description": "Formação em software, hardware e sistemas integrados: algoritmos, estruturas de dados, arquitetura de software, sistemas distribuídos, redes, segurança, eletrônica e sistemas embarcados."
   },
   {
     "name": "Técnico em Informática",
-    "start": "2012",
     "degree": "Técnico",
-    "end": "2015",
     "institution": "CERB",
-    "logo": "assets/images/computer.svg"
+    "start": "2012",
+    "end": "2015",
+    "logo": "assets/images/computer.svg",
+    "description": "Fundamentos de programação, redes e manutenção de sistemas."
   }
 ]

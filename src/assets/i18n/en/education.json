@@ -1,18 +1,29 @@
 [
   {
-    "name": "Bacharelado em Engenharia de Computação",
-    "start": "2019",
-    "degree": "Graduação",
-    "end": "2025",
+    "name": "Postgraduate in Applied Generative AI",
+    "degree": "Specialization (Lato Sensu)",
     "institution": "UTFPR",
-    "logo": "assets/images/utfpr.svg"
+    "start": "2026",
+    "end": "2028",
+    "logo": "assets/images/utfpr.svg",
+    "description": "Full generative-AI cycle: LLMOps, RAG and fine-tuning (LoRA/PEFT), autonomous agents with LangGraph, evaluation with RAGAs and TruLens, and governance (NIST AI RMF, EU AI Act). In progress."
   },
   {
-    "name": "Técnico em Informática",
-    "start": "2012",
-    "degree": "Técnico",
-    "end": "2015",
+    "name": "BSc in Computer Engineering",
+    "degree": "Bachelor's",
+    "institution": "UTFPR",
+    "start": "2017",
+    "end": "2025",
+    "logo": "assets/images/utfpr.svg",
+    "description": "Software, hardware and integrated systems: algorithms, data structures, software architecture, distributed systems, networks, security, electronics and embedded systems."
+  },
+  {
+    "name": "Technical degree in IT",
+    "degree": "Technical",
     "institution": "CERB",
-    "logo": "assets/images/computer.svg"
+    "start": "2012",
+    "end": "2015",
+    "logo": "assets/images/computer.svg",
+    "description": "Programming fundamentals, networking and systems maintenance."
   }
 ]

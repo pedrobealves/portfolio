@@ -22,6 +22,10 @@
         <source>Experiência</source>
         <target>Experience</target>
       </trans-unit>
+      <trans-unit id="educationTitle" datatype="html">
+        <source>Educação</source>
+        <target>Education</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

@@ -2,6 +2,20 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="pt-BR" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="educationTitle" datatype="html">
+        <source>Educação</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/components/home-education/home-education.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experienceTitle" datatype="html">
+        <source>Experiência</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/components/home-experience/home-experience.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="switchLanguage" datatype="html">
         <source>Trocar idioma</source>
         <context-group purpose="location">
@@ -14,6 +28,13 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/components/home-skills-wall/home-skills-wall.html</context>
           <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dialogClose" datatype="html">
+        <source>Fechar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/detail-dialog/detail-dialog.html</context>
+          <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
     </body>

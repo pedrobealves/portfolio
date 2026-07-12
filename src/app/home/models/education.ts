@@ -5,4 +5,5 @@ export type Education = {
   start: string
   end?: string
   logo: string
+  description: string
 }
