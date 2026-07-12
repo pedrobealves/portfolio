@@ -1,6 +1,7 @@
 import { httpResource } from '@angular/common/http'
-import { Injectable, Signal, computed, effect } from '@angular/core'
+import { Injectable, LOCALE_ID, Signal, computed, effect, inject } from '@angular/core'
 import { Education } from './models/education'
+import { Experience } from './models/experience'
 import { Profile } from './models/profile'
 import { Project } from './models/project'
 import { Skill } from './models/skill'
@@ -15,12 +16,21 @@ type ContentResource<T> = {
   providedIn: 'root'
 })
 export class PortfolioContent {
+  private readonly locale = inject(LOCALE_ID)
+
   readonly profile = this.contentResource<Profile | undefined>('profile.json', undefined)
   readonly educations = this.contentResource<Education[]>('education.json', [])
   readonly skills = this.contentResource<Skill[]>('skills.json', [])
   readonly projects = this.contentResource<Project[]>('projects.json', [])
+  readonly experiences = this.contentResource<Experience[]>('experience.json', [])
 
-  private readonly contents = [this.profile, this.educations, this.skills, this.projects]
+  private readonly contents = [
+    this.profile,
+    this.educations,
+    this.skills,
+    this.projects,
+    this.experiences
+  ]
 
   readonly loadFailed = computed(() => this.contents.some((content) => content.error() !== undefined))
 
@@ -37,7 +47,7 @@ export class PortfolioContent {
   }
 
   private contentResource<T>(file: string, fallback: T): ContentResource<T> {
-    const resource = httpResource<T>(() => `assets/${file}`)
+    const resource = httpResource<T>(() => `assets/i18n/${this.locale}/${file}`)
     return {
       value: computed(() => (resource.hasValue() ? resource.value() : fallback)),
       error: resource.error,
