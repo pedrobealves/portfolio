@@ -41,3 +41,9 @@ testem.log
 .DS_Store
 Thumbs.db
 .directory
+
+# AI tooling (installed artifacts and per-machine settings)
+.agents/
+.claude/settings.local.json
+.claude/skills/
+docs/superpowers/
