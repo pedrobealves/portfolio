@@ -9,6 +9,16 @@
     gap: $padding;
     grid-template-columns: 1fr 1fr;
 
+    &__frame {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      border-radius: 100em;
+      width: 6.5em;
+      height: 6.5em;
+      border: 0.3em solid $soft-purple;
+    }
+
     &__logo {
       width: 100%;
       height: 100%;

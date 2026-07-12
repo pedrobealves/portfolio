@@ -1,13 +1,12 @@
-import { Component, Input } from '@angular/core'
+import { ChangeDetectionStrategy, Component, input } from '@angular/core'
 
 @Component({
   selector: 'app-card-button',
   standalone: true,
-  imports: [],
   templateUrl: './card-button.component.html',
-  styleUrl: './card-button.component.scss'
+  styleUrl: './card-button.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardButtonComponent {
-  @Input()
-  screws: boolean = false
+  screws = input(false)
 }

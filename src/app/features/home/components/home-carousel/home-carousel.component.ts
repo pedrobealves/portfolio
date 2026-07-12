@@ -1,4 +1,9 @@
-import { Component, ViewChild, inject } from '@angular/core'
+import {
+  ChangeDetectionStrategy,
+  Component,
+  ViewChild,
+  inject
+} from '@angular/core'
 import { EmblaCarouselDirective } from 'embla-carousel-angular'
 import { DataService } from '../../services/data.service'
 
@@ -7,7 +12,8 @@ import { DataService } from '../../services/data.service'
   standalone: true,
   imports: [EmblaCarouselDirective],
   templateUrl: './home-carousel.component.html',
-  styleUrl: './home-carousel.component.scss'
+  styleUrl: './home-carousel.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeCarouselComponent {
   @ViewChild(EmblaCarouselDirective) private emblaRef?: EmblaCarouselDirective

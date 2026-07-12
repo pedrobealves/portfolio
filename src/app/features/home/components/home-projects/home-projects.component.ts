@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { ChangeDetectionStrategy, Component } from '@angular/core'
 import { CardComponent } from '../../../../shared/components/card/card.component'
 import { CardHeaderComponent } from '../../../../shared/components/card-header/card-header.component'
 import { RoundButtonComponent } from '../../../../shared/components/round-button/round-button.component'
@@ -16,6 +16,7 @@ import { HomeCarouselComponent } from '../home-carousel/home-carousel.component'
     HomeCarouselComponent
   ],
   templateUrl: './home-projects.component.html',
-  styleUrl: './home-projects.component.scss'
+  styleUrl: './home-projects.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeProjectsComponent {}

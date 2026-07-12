@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core'
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core'
 import { ButtonComponent } from '../../../../shared/components/button/button.component'
 import { DataService } from '../../services/data.service'
 
@@ -7,7 +7,8 @@ import { DataService } from '../../services/data.service'
   standalone: true,
   imports: [ButtonComponent],
   templateUrl: './home-contact.component.html',
-  styleUrl: './home-contact.component.scss'
+  styleUrl: './home-contact.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeContactComponent {
   protected profile = inject(DataService).profile

@@ -1,14 +1,12 @@
-import { CommonModule } from '@angular/common'
-import { Component, HostBinding, Input } from '@angular/core'
+import { ChangeDetectionStrategy, Component, input } from '@angular/core'
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [CommonModule],
   templateUrl: './card.component.html',
-  styleUrl: './card.component.scss'
+  styleUrl: './card.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardComponent {
-  @Input()
-  type: 'row' | 'flex-1' = 'row'
+  type = input<'row' | 'stack'>('stack')
 }

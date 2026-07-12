@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { ChangeDetectionStrategy, Component } from '@angular/core'
 import { CardComponent } from '../../../../shared/components/card/card.component'
 import { SvgIconComponent } from 'angular-svg-icon'
 
@@ -7,6 +7,7 @@ import { SvgIconComponent } from 'angular-svg-icon'
   standalone: true,
   imports: [CardComponent, SvgIconComponent],
   templateUrl: './home-bars.component.html',
-  styleUrl: './home-bars.component.scss'
+  styleUrl: './home-bars.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeBarsComponent {}

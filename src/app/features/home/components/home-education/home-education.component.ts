@@ -1,7 +1,6 @@
-import { Component, inject } from '@angular/core'
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core'
 import { CardComponent } from '../../../../shared/components/card/card.component'
 import { CardHeaderComponent } from '../../../../shared/components/card-header/card-header.component'
-import { RoundLinkComponent } from '../../../../shared/components/round-link/round-link.component'
 import { CardButtonComponent } from '../../../../shared/components/card-button/card-button.component'
 import { DataService } from '../../services/data.service'
 import { SvgIconComponent } from 'angular-svg-icon'
@@ -12,12 +11,12 @@ import { SvgIconComponent } from 'angular-svg-icon'
   imports: [
     CardComponent,
     CardHeaderComponent,
-    RoundLinkComponent,
     CardButtonComponent,
     SvgIconComponent
   ],
   templateUrl: './home-education.component.html',
-  styleUrl: './home-education.component.scss'
+  styleUrl: './home-education.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeEducationComponent {
   protected educations = inject(DataService).educations

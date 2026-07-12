@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { ChangeDetectionStrategy, Component } from '@angular/core'
 import { HomeEducationComponent } from '../home-education/home-education.component'
 import { HomeSoundComponent } from '../home-sound/home-sound.component'
 
@@ -7,6 +7,7 @@ import { HomeSoundComponent } from '../home-sound/home-sound.component'
   standalone: true,
   imports: [HomeEducationComponent, HomeSoundComponent],
   template: ` <app-home-education /> <app-home-sound /> `,
-  styleUrl: './home-panel-right.component.scss'
+  styleUrl: './home-panel-right.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomePanelRightComponent {}

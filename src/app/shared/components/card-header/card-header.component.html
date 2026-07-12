@@ -1,9 +1,9 @@
 <div class="header">
   <div class="header__container">
     <div class="header__icon">
-      <ng-icon class="icon--yellow" [name]="icon" />
+      <ng-icon class="icon--yellow" [name]="icon()" />
     </div>
-    <h2 class="header__title">{{ title }}</h2>
+    <h2 class="header__title">{{ title() }}</h2>
   </div>
   <svg-icon
     class="icon--medium-purple header__dots"

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core'
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core'
 import { Skill } from '../../models/skill.model'
 import { DataService } from '../../services/data.service'
 
@@ -9,7 +9,8 @@ const SKILL_ICON_COLOR = '62FD85'
   selector: 'app-home-skills-wall',
   standalone: true,
   templateUrl: './home-skills-wall.component.html',
-  styleUrl: './home-skills-wall.component.scss'
+  styleUrl: './home-skills-wall.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeSkillsWallComponent {
   protected skills = inject(DataService).skills

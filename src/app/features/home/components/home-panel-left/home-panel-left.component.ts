@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { ChangeDetectionStrategy, Component } from '@angular/core'
 import { HomeHeaderComponent } from '../home-header/home-header.component'
 import { HomeAvatarComponent } from '../home-avatar/home-avatar.component'
 import { HomeContactComponent } from '../home-contact/home-contact.component'
@@ -19,6 +19,7 @@ import { HomeSkillsWallComponent } from '../home-skills-wall/home-skills-wall.co
     <app-home-contact />
     <app-home-skills-wall />
   `,
-  styleUrl: './home-panel-left.component.scss'
+  styleUrl: './home-panel-left.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomePanelLeftComponent {}

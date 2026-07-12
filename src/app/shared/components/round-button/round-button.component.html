@@ -1,16 +1,12 @@
 <div
   class="round-btn round-btn--radius"
-  [ngClass]="{
-    'round-btn--big': size == 'big',
-    'round-btn--small': size == 'small'
-  }"
+  [class.round-btn--big]="size() === 'big'"
+  [class.round-btn--small]="size() === 'small'"
 >
   <div
     class="round-btn__up round-btn__up--purple"
-    [ngClass]="{
-      'round-btn__up--big': size == 'big',
-      'round-btn__up--small': size == 'small'
-    }"
+    [class.round-btn__up--big]="size() === 'big'"
+    [class.round-btn__up--small]="size() === 'small'"
   >
     <ng-content></ng-content>
   </div>

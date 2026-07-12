@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { ChangeDetectionStrategy, Component, input } from '@angular/core'
 
 import {
   NgIconComponent,
@@ -20,9 +20,10 @@ import { SvgIconComponent } from 'angular-svg-icon'
     })
   ],
   templateUrl: './card-header.component.html',
-  styleUrl: './card-header.component.scss'
+  styleUrl: './card-header.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardHeaderComponent {
-  @Input() title: string = ''
-  @Input() icon: string = ''
+  title = input.required<string>()
+  icon = input.required<string>()
 }

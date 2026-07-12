@@ -1,6 +1,5 @@
-import { Component, inject } from '@angular/core'
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core'
 import { DataService } from '../../services/data.service'
-import { SvgIconComponent } from 'angular-svg-icon'
 import { CardComponent } from '../../../../shared/components/card/card.component'
 import { CardButtonComponent } from '../../../../shared/components/card-button/card-button.component'
 import { RoundButtonComponent } from '../../../../shared/components/round-button/round-button.component'
@@ -33,7 +32,8 @@ import {
     })
   ],
   templateUrl: './home-social.component.html',
-  styleUrl: './home-social.component.scss'
+  styleUrl: './home-social.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeSocialComponent {
   protected profile = inject(DataService).profile
