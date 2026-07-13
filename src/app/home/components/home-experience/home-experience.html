@@ -6,6 +6,7 @@
       <button
         type="button"
         class="role"
+        [title]="experience.role + ' — ' + experience.company"
         [attr.aria-label]="experience.role + ' — ' + experience.company"
         (click)="selected.set(experience)"
       >

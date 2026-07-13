@@ -1,40 +1,23 @@
-<div class="hatch">
-  <button
-    type="button"
-    class="hatch__toggle"
-    [attr.aria-expanded]="expanded()"
-    aria-controls="education-content"
-    (click)="toggle()"
-  >
-    <svg-icon aria-hidden="true" class="hatch__screw icon--soft-purple" src="assets/icons/screw.svg" />
-    <span class="hatch__title" i18n="@@educationTitle">Educação</span>
-    <svg-icon aria-hidden="true" class="hatch__screw icon--soft-purple" src="assets/icons/screw.svg" />
-  </button>
-
-  <div
-    id="education-content"
-    class="hatch__content"
-    [class.hatch__content--open]="expanded()"
-    [attr.inert]="!expanded() ? '' : null"
-  >
-    <div class="container">
-      @for (education of educations.value(); track education.name) {
-      <app-card-button>
-        <button
-          type="button"
-          class="course"
-          [attr.aria-label]="education.name"
-          (click)="selected.set(education)"
-        >
-          <div class="course__frame">
-            <img [src]="education.logo" [alt]="education.institution" class="course__logo" />
-          </div>
-        </button>
-      </app-card-button>
-      }
-    </div>
+<app-card>
+  <app-card-header title="Educação" i18n-title="@@educationTitle" icon="remixGraduationCapFill" />
+  <div class="container">
+    @for (education of educations.value(); track education.name) {
+    <app-card-button>
+      <button
+        type="button"
+        class="course"
+        [title]="education.name"
+        [attr.aria-label]="education.name"
+        (click)="selected.set(education)"
+      >
+        <div class="course__frame">
+          <img [src]="education.logo" [alt]="education.institution" class="course__logo" />
+        </div>
+      </button>
+    </app-card-button>
+    }
   </div>
-</div>
+</app-card>
 
 <app-detail-dialog
   [open]="selected() !== null"

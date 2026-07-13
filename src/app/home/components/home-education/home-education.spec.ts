@@ -38,31 +38,14 @@ describe('HomeEducation', () => {
     return fixture
   }
 
-  it('starts collapsed and expands when the hatch is toggled', async () => {
+  it('renders one button per education', async () => {
     const fixture = await setup()
-    const toggle = (fixture.nativeElement as HTMLElement).querySelector('.hatch__toggle') as HTMLButtonElement
-    expect(toggle.getAttribute('aria-expanded')).toBe('false')
-    toggle.click()
-    fixture.detectChanges()
-    expect(toggle.getAttribute('aria-expanded')).toBe('true')
-  })
-
-  it('marks the collapsed content inert and lifts inert once expanded', async () => {
-    const fixture = await setup()
-    const content = (fixture.nativeElement as HTMLElement).querySelector('.hatch__content') as HTMLElement
-    expect(content.getAttribute('inert')).toBe('')
-
-    const toggle = (fixture.nativeElement as HTMLElement).querySelector('.hatch__toggle') as HTMLButtonElement
-    toggle.click()
-    fixture.detectChanges()
-
-    expect(content.getAttribute('inert')).toBeNull()
+    const buttons = (fixture.nativeElement as HTMLElement).querySelectorAll('.course')
+    expect(buttons.length).toBe(1)
   })
 
   it('opens the dialog with the course description when a logo is clicked', async () => {
     const fixture = await setup()
-    ;((fixture.nativeElement as HTMLElement).querySelector('.hatch__toggle') as HTMLButtonElement).click()
-    fixture.detectChanges()
     const logo = (fixture.nativeElement as HTMLElement).querySelector('.course') as HTMLButtonElement
     logo.click()
     fixture.detectChanges()

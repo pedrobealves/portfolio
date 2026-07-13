@@ -3,47 +3,6 @@
 :host {
   display: flex;
   width: 100%;
-  height: 100%;
-
-  .hatch {
-    width: 100%;
-    background-color: $dark-purple;
-    border-radius: $border-radius;
-    padding: $padding;
-
-    &__toggle {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      cursor: pointer;
-    }
-
-    &__title {
-      font-weight: bolder;
-      color: $smoke;
-    }
-
-    &__screw svg {
-      width: 2.22em;
-      height: 2.22em;
-    }
-
-    &__content {
-      overflow: hidden;
-      max-height: 0;
-      transition: max-height 0.3s ease;
-
-      &--open {
-        max-height: 40em;
-        margin-top: $padding;
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        transition: none;
-      }
-    }
-  }
 
   .container {
     display: grid;
@@ -63,6 +22,7 @@
       width: 6.5em;
       height: 6.5em;
       border: 0.3em solid $soft-purple;
+      transition: border-color 0.2s;
     }
 
     &__logo {
@@ -70,6 +30,10 @@
       height: 100%;
       max-height: 2em;
       max-width: 4em;
+    }
+
+    &:hover .course__frame {
+      border-color: $yellow;
     }
   }
 }

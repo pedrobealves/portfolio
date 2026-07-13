@@ -1,11 +1,16 @@
 @use '_variables' as *;
 
 .dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
   border: 0;
   background: transparent;
   color: $smoke;
   max-width: 32em;
   width: 90vw;
+  height: fit-content;
+  max-height: 90vh;
   &::backdrop {
     background: rgba(0, 0, 0, 0.6);
   }

@@ -19,5 +19,10 @@
     height: 6.5em;
     border: 0.3em solid $soft-purple;
     cursor: pointer;
+    transition: border-color 0.2s;
+
+    &:hover {
+      border-color: $yellow;
+    }
   }
 }
