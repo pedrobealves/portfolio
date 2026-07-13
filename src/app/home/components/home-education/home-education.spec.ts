@@ -47,6 +47,18 @@ describe('HomeEducation', () => {
     expect(toggle.getAttribute('aria-expanded')).toBe('true')
   })
 
+  it('marks the collapsed content inert and lifts inert once expanded', async () => {
+    const fixture = await setup()
+    const content = (fixture.nativeElement as HTMLElement).querySelector('.hatch__content') as HTMLElement
+    expect(content.getAttribute('inert')).toBe('')
+
+    const toggle = (fixture.nativeElement as HTMLElement).querySelector('.hatch__toggle') as HTMLButtonElement
+    toggle.click()
+    fixture.detectChanges()
+
+    expect(content.getAttribute('inert')).toBeNull()
+  })
+
   it('opens the dialog with the course description when a logo is clicked', async () => {
     const fixture = await setup()
     ;((fixture.nativeElement as HTMLElement).querySelector('.hatch__toggle') as HTMLButtonElement).click()

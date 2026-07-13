@@ -11,7 +11,12 @@
     <svg-icon aria-hidden="true" class="hatch__screw icon--soft-purple" src="assets/icons/screw.svg" />
   </button>
 
-  <div id="education-content" class="hatch__content" [class.hatch__content--open]="expanded()">
+  <div
+    id="education-content"
+    class="hatch__content"
+    [class.hatch__content--open]="expanded()"
+    [attr.inert]="!expanded() ? '' : null"
+  >
     <div class="container">
       @for (education of educations.value(); track education.name) {
       <app-card-button>

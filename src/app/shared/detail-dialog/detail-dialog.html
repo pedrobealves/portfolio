@@ -1,5 +1,5 @@
 <!-- eslint-disable-next-line @angular-eslint/template/click-events-have-key-events, @angular-eslint/template/interactive-supports-focus -->
-<dialog #dialog class="dialog" (close)="closed.emit()" (click)="onBackdrop($event)">
+<dialog #dialog class="dialog" [attr.aria-label]="title()" (close)="closed.emit()" (click)="onBackdrop($event)">
   <div class="dialog__panel">
     <div class="dialog__head">
       <h3 class="dialog__title">{{ title() }}</h3>

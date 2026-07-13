@@ -2,6 +2,27 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="pt-BR" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="avatarAlt" datatype="html">
+        <source>Foto de Pedro Bernardi</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/components/home-avatar/home-avatar.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="carouselRole" datatype="html">
+        <source>carrossel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/components/home-carousel/home-carousel.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="carouselLabel" datatype="html">
+        <source>Projetos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/components/home-carousel/home-carousel.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="contactCta" datatype="html">
         <source>Contato</source>
         <context-group purpose="location">
@@ -37,11 +58,39 @@
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="projectPrev" datatype="html">
+        <source>Projeto anterior</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/components/home-projects/home-projects.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="projectNext" datatype="html">
+        <source>Próximo projeto</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/components/home-projects/home-projects.html</context>
+          <context context-type="linenumber">21,22</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="skillsTitle" datatype="html">
         <source>Habilidades</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/components/home-skills-wall/home-skills-wall.html</context>
           <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="skillIconAlt" datatype="html">
+        <source>Ícone da habilidade <x id="INTERPOLATION" equiv-text="{{ skill.name }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/components/home-skills-wall/home-skills-wall.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="socialNav" datatype="html">
+        <source>Redes sociais</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/components/home-social/home-social.html</context>
+          <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="loadError" datatype="html">

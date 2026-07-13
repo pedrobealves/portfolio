@@ -1,5 +1,5 @@
 <app-card type="row">
-  <nav aria-label="Redes sociais" style="display: contents">
+  <nav aria-label="Redes sociais" i18n-aria-label="@@socialNav" style="display: contents">
     @if (profile.value(); as profile) { @for (social of
     profile.socialLinks; track social.name) {
     <app-card-button [screws]="true">
