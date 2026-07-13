@@ -2,7 +2,7 @@
 
 @keyframes contact-slider-scroll {
   to {
-    background-position-x: 14.4em;
+    background-position-x: 2.371em;
   }
 }
 
@@ -38,10 +38,13 @@
           left: 0%;
           right: 0%;
           overflow: hidden;
-          background-color: #29a445;
-          background-image: url('../../../../assets/images/slider.svg');
-          background-repeat: repeat-x;
-          background-size: 14.4em 100%;
+          background-image: repeating-linear-gradient(
+            -35deg,
+            #29a445 0,
+            #29a445 0.72em,
+            #32ca55 0.72em,
+            #32ca55 1.36em
+          );
         }
 
         &-btn {
