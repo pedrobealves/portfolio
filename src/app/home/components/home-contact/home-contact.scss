@@ -2,7 +2,7 @@
 
 @keyframes contact-slider-scroll {
   to {
-    background-position-x: 2.371em;
+    transform: translateX(2.371em);
   }
 }
 
@@ -16,7 +16,7 @@
     border-radius: $border-radius;
     padding: $padding;
 
-    &:hover .slider__wrapper-bg {
+    &:hover .slider__wrapper-bg::before {
       animation: contact-slider-scroll 3s linear infinite;
     }
 
@@ -38,13 +38,22 @@
           left: 0%;
           right: 0%;
           overflow: hidden;
-          background-image: repeating-linear-gradient(
-            -35deg,
-            #29a445 0,
-            #29a445 0.72em,
-            #32ca55 0.72em,
-            #32ca55 1.36em
-          );
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: -2.371em;
+            width: calc(100% + 2.371em);
+            background-image: repeating-linear-gradient(
+              -35deg,
+              #29a445 0,
+              #29a445 0.72em,
+              #32ca55 0.72em,
+              #32ca55 1.36em
+            );
+          }
         }
 
         &-btn {
