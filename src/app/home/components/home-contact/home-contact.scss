@@ -22,20 +22,15 @@
       &__wrapper {
         &-bg {
           border-radius: $radius-sm;
-          display: flex;
           position: absolute;
           top: 0%;
           bottom: 0%;
           left: 0%;
           right: 0%;
           overflow: hidden;
-          gap: 3em;
-
-          img {
-            transform-style: preserve-3d;
-            width: 14.4em;
-            height: 3.6em;
-          }
+          background-image: url('../../../../assets/images/slider.svg');
+          background-repeat: repeat-x;
+          background-size: auto 100%;
         }
 
         &-btn {
