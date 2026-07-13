@@ -16,14 +16,5 @@
     "end": "2025",
     "logo": "assets/images/utfpr.svg",
     "description": "Formação em software, hardware e sistemas integrados: algoritmos, estruturas de dados, arquitetura de software, sistemas distribuídos, redes, segurança, eletrônica e sistemas embarcados."
-  },
-  {
-    "name": "Técnico em Informática",
-    "degree": "Técnico",
-    "institution": "CERB",
-    "start": "2012",
-    "end": "2015",
-    "logo": "assets/images/computer.svg",
-    "description": "Fundamentos de programação, redes e manutenção de sistemas."
   }
 ]

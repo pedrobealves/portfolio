@@ -1,7 +1,7 @@
 @use '_variables' as *;
 
 :host {
-  padding: 0 $padding;
+  display: flex;
   .contact {
     flex-direction: row;
     display: flex;

@@ -6,7 +6,7 @@ import { HomeSound } from '../home-sound/home-sound'
 @Component({
   selector: 'app-home-panel-right',
   imports: [HomeExperience, HomeEducation, HomeSound],
-  template: ` <app-home-experience /> <app-home-education /> <app-home-sound /> `,
+  template: ` <app-home-experience /> <app-home-sound /> <app-home-education />  `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomePanelRight {}

@@ -1,0 +1,45 @@
+@use '_variables' as *;
+
+:host {
+  display: flex;
+
+  .language {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $dark-green;
+    border-radius: $border-radius;
+    padding: $padding;
+  }
+
+  .switch {
+    display: block;
+    position: relative;
+    width: 5.5em;
+    height: 3em;
+    background-color: $black-green;
+    border-radius: $radius-sm;
+    cursor: pointer;
+
+    &__knob {
+      position: absolute;
+      top: 0.3em;
+      bottom: 0.3em;
+      left: 0.3em;
+      width: 2.6em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $yellow;
+      color: $dark-yellow;
+      border-radius: $radius-sm;
+      box-shadow: 0 0.3em 0 $dark-yellow;
+      font-weight: bolder;
+      transition: left 0.15s;
+    }
+
+    &--en .switch__knob {
+      left: calc(100% - 2.6em - 0.3em);
+    }
+  }
+}
