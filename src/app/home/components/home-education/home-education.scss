@@ -11,18 +11,18 @@
   }
 
   .course {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: $radius-pill;
+    width: 6.5em;
+    height: 6.5em;
+    border: 0.3em solid $soft-purple;
     cursor: pointer;
-    width: 100%;
+    transition: border-color 0.2s;
 
-    &__frame {
-      justify-content: center;
-      align-items: center;
-      display: flex;
-      border-radius: $radius-pill;
-      width: 6.5em;
-      height: 6.5em;
-      border: 0.3em solid $soft-purple;
-      transition: border-color 0.2s;
+    &:hover {
+      border-color: $yellow;
     }
 
     &__logo {
@@ -30,10 +30,6 @@
       height: 100%;
       max-height: 2em;
       max-width: 4em;
-    }
-
-    &:hover .course__frame {
-      border-color: $yellow;
     }
   }
 }

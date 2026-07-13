@@ -10,9 +10,7 @@
         [attr.aria-label]="education.name"
         (click)="selected.set(education)"
       >
-        <div class="course__frame">
-          <img [src]="education.logo" [alt]="education.institution" class="course__logo" />
-        </div>
+        <img [src]="education.logo" [alt]="education.institution" class="course__logo" />
       </button>
     </app-card-button>
     }
