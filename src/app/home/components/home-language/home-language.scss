@@ -2,44 +2,42 @@
 
 :host {
   display: flex;
+  align-items: center;
 
   .language {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $dark-green;
-    border-radius: $border-radius;
-    padding: $padding;
   }
 
   .switch {
     display: block;
     position: relative;
-    width: 5.5em;
+    width: 5em;
     height: 3em;
-    background-color: $black-green;
-    border-radius: $radius-sm;
+    background-color: $dark-yellow;
+    border-radius: $radius-md;
     cursor: pointer;
 
     &__knob {
       position: absolute;
-      top: 0.3em;
-      bottom: 0.3em;
-      left: 0.3em;
-      width: 2.6em;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 2.9em;
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: $yellow;
       color: $dark-yellow;
-      border-radius: $radius-sm;
-      box-shadow: 0 0.3em 0 $dark-yellow;
+      border-radius: $radius-md 0 0 $radius-md;
       font-weight: bolder;
       transition: left 0.15s;
     }
 
     &--en .switch__knob {
-      left: calc(100% - 2.6em - 0.3em);
+      left: calc(100% - 2.9em);
+      border-radius: 0 $radius-md $radius-md 0;
     }
   }
 }
