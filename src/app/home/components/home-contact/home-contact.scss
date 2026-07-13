@@ -1,5 +1,11 @@
 @use '_variables' as *;
 
+@keyframes contact-slider-scroll {
+  to {
+    background-position-x: 14.4em;
+  }
+}
+
 :host {
   display: flex;
   .contact {
@@ -9,6 +15,10 @@
     background-color: $dark-green;
     border-radius: $border-radius;
     padding: $padding;
+
+    &:hover .slider__wrapper-bg {
+      animation: contact-slider-scroll 3s linear infinite;
+    }
 
     .slider {
       &,
@@ -30,7 +40,7 @@
           overflow: hidden;
           background-image: url('../../../../assets/images/slider.svg');
           background-repeat: repeat-x;
-          background-size: auto 100%;
+          background-size: 14.4em 100%;
         }
 
         &-btn {
