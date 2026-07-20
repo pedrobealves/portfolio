@@ -97,10 +97,6 @@
             "setupFiles": ["src/test-setup.ts"]
           }
         },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy",
-          "options": { "cname": "pedrobernardi.com" }
-        },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
