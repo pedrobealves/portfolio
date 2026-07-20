@@ -17,7 +17,7 @@
     padding: $padding;
 
     &:hover .slider__wrapper-bg::before {
-      animation: contact-slider-scroll 3s linear infinite;
+      animation: contact-slider-scroll 1.5s linear infinite;
     }
 
     .slider {
