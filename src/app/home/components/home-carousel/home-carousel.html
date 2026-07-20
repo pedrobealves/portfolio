@@ -11,15 +11,43 @@
 >
   <div class="embla__container">
     @for (project of projects.value(); track project.title) {
-    <a
+    <button
+      type="button"
       class="embla__slide"
       aria-roledescription="slide"
-      [href]="project.site || project.github"
-      target="_blank"
-      rel="noopener noreferrer"
+      [attr.aria-label]="project.title"
+      (click)="selected.set(project)"
     >
       <img [ngSrc]="project.image" [alt]="project.title" fill [priority]="$first" />
-    </a>
+    </button>
     }
   </div>
 </div>
+
+<app-detail-dialog
+  [open]="selected() !== null"
+  icon="faSolidImage"
+  [title]="selected()?.title ?? ''"
+  (closed)="selected.set(null)"
+>
+  @if (selected(); as project) {
+  <p class="detail__period">{{ project.year }}</p>
+  <ul class="detail__list">
+    <li>{{ project.description }}</li>
+  </ul>
+  <p class="detail__tech">{{ project.technologies.join(' · ') }}</p>
+  <div class="detail__links">
+    @if (project.site) {
+    <a app-button [href]="project.site" target="_blank" rel="noopener noreferrer">
+      <ng-icon name="faSolidArrowUpRightFromSquare" />
+      <span i18n="@@projectSite">Ver site</span>
+    </a>
+    } @if (project.github) {
+    <a app-button [href]="project.github" target="_blank" rel="noopener noreferrer">
+      <ng-icon name="faBrandGithub" />
+      <span>GitHub</span>
+    </a>
+    }
+  </div>
+  }
+</app-detail-dialog>

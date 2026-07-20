@@ -9,6 +9,8 @@
   min-width: 0;
   height: 20em;
   position: relative;
+  cursor: pointer;
+  overflow: hidden;
 
   &:hover {
     img {

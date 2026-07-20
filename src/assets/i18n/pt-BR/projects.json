@@ -1,5 +1,26 @@
 [
   {
+    "title": "Circulogi",
+    "year": "2025",
+    "site": "https://circulogi.pedrobernardi.com/",
+    "github": "https://github.com/pedrobealves/circulogi",
+    "image": "assets/images/projects/circulogi.jpeg",
+    "description": "Aplicação web para simulação de circuitos digitais combinacionais e sequenciais representados como grafos direcionados, exibindo a subexpressão booleana na saída de cada nó para uso didático. Trabalho de conclusão do curso de Engenharia de Computação na UTFPR.",
+    "technologies": [
+      "Nuxt",
+      "Vue 3",
+      "Pinia",
+      "v-network-graph",
+      "Rust",
+      "WebAssembly",
+      "Prisma",
+      "PostgreSQL",
+      "Supabase",
+      "Vitest",
+      "AWS Amplify"
+    ]
+  },
+  {
     "title": "ng+",
     "year": "2023",
     "site": "https://www.newgamemais.com/",

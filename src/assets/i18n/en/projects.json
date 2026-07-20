@@ -1,5 +1,26 @@
 [
   {
+    "title": "Circulogi",
+    "year": "2025",
+    "site": "https://circulogi.pedrobernardi.com/",
+    "github": "https://github.com/pedrobealves/circulogi",
+    "image": "assets/images/projects/circulogi.jpeg",
+    "description": "Web application for simulating combinational and sequential digital circuits represented as directed graphs, showing the boolean sub-expression at each node output for teaching purposes. Undergraduate thesis in Computer Engineering at UTFPR.",
+    "technologies": [
+      "Nuxt",
+      "Vue 3",
+      "Pinia",
+      "v-network-graph",
+      "Rust",
+      "WebAssembly",
+      "Prisma",
+      "PostgreSQL",
+      "Supabase",
+      "Vitest",
+      "AWS Amplify"
+    ]
+  },
+  {
     "title": "ng+",
     "year": "2023",
     "site": "https://www.newgamemais.com/",
