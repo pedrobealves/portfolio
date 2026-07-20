@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run build` — production build to `dist/portfolio` (production is the default configuration)
 - `npm test` — Vitest tests via `ng test` (`@angular/build:unit-test` builder, jsdom; watches in a TTY, single run otherwise — CI uses plain `npx ng test`)
 - `ng test --include='**/app.spec.ts'` — run a single spec file
-- `ng deploy` — publish to GitHub Pages (angular-cli-ghpages)
+- Deploys are automatic: every push to `main` runs `.github/workflows/pages.yml`, which builds and publishes via `actions/deploy-pages` (the Pages source is set to GitHub Actions). The workflow writes `CNAME` and `.nojekyll` into the artifact. `ng deploy` (angular-cli-ghpages) still works as a manual fallback, but it publishes through the legacy `gh-pages` branch builder — slow and prone to failing, so prefer the workflow.
 
 Linting: `npm run lint` (angular-eslint; flat config in `eslint.config.js` — component selectors may be `element` or `attribute` with the `app` prefix, matching the shared button primitives). Component schematics set `skipTests: true`, so `ng generate component` creates no spec files; the existing specs are `app.spec.ts` and `portfolio-content.spec.ts`. CI (`.github/workflows/ci.yml`) runs lint, `npm run build`, and `npx ng test` on every push to `main` and on pull requests.
 
@@ -30,9 +30,13 @@ The site ships two locales via `@angular/localize`: source `pt-BR` at `/` and `e
 
 - `home/` — the page (`home.ts`/`.html`/`.scss`), `portfolio-content.ts`, `models/`
 - `home/components/` — panel and section components (`home-header`, `home-projects`, `home-carousel`, …). Panels are pure composition with inline templates; sections have separate `.html`/`.scss`.
-- `shared/` — UI primitives, one folder each (`button`, `card`, `card-button`, `card-header`, `round-button`). Buttons/links use attribute selectors (`button[app-button], a[app-button]`) so the component attaches to native elements; follow this pattern for new interactive primitives.
+- `shared/` — UI primitives, one folder each (`button`, `card`, `card-button`, `card-header`, `detail-dialog`, `round-button`). Buttons/links use attribute selectors (`button[app-button], a[app-button]`) so the component attaches to native elements; follow this pattern for new interactive primitives.
 
-The prev/next buttons in `home-projects` drive the Embla carousel (`embla-carousel-angular`) in `home-carousel` through a `#carousel` template reference, calling its `scrollPrev()`/`scrollNext()` methods, which reach the Embla API via a `viewChild` signal query. Project screenshots render with `NgOptimizedImage`.
+`detail-dialog` wraps a native `<dialog>` opened via the `open` input (an `effect` calls `showModal()`/`close()`) and emits `closed` on Esc, backdrop click or the close button. It renders a header row (icon tile from the `icon` input, or image tile from `logo`; then the `title` tile and the round close button), the projected body, and the screw/dots footer. Body content is composed from the global `.detail__period`, `.detail__list`, `.detail__tech` and `.detail__links` classes in `styles.scss`, each of which renders as its own dark tile. `home-experience`, `home-education` and `home-carousel` each hold a `selected` signal bound to `[open]`. An `icon` name must be registered by `provideIcons` in an ancestor injector — `provideIcons` merges with parent registries, so the consumer registers the icons it passes.
+
+The prev/next buttons in `home-projects` drive the Embla carousel (`embla-carousel-angular`) in `home-carousel` through a `#carousel` template reference, calling its `scrollPrev()`/`scrollNext()` methods, which reach the Embla API via a `viewChild` signal query. Project screenshots render with `NgOptimizedImage`; clicking a slide opens the project's `detail-dialog` (description, technologies, and site/GitHub link buttons) instead of navigating away.
+
+Assets referenced from `src/assets/i18n/**/*.json` (project screenshots, education logos) must be committed. The build copies `src/assets` wholesale and never validates paths inside JSON, so a missing file passes lint, build and CI, then 404s only on a fresh clone or in production.
 
 ### Styling
 
