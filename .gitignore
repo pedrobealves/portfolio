@@ -47,5 +47,6 @@ Thumbs.db
 .claude/settings.local.json
 .claude/skills/
 docs/superpowers/
+.playwright-mcp/
 .nx/cache
 .nx/workspace-data
