@@ -2,6 +2,13 @@
 <dialog #dialog class="dialog" [attr.aria-label]="title()" (close)="closed.emit()" (click)="onBackdrop($event)">
   <div class="dialog__panel">
     <div class="dialog__head">
+      <div class="dialog__badge">
+        @if (logo()) {
+        <img class="dialog__logo" [src]="logo()" alt="" />
+        } @else if (icon()) {
+        <ng-icon class="icon--yellow" [name]="icon()" />
+        }
+      </div>
       <h3 class="dialog__title">{{ title() }}</h3>
       <button
         type="button"
@@ -10,11 +17,18 @@
         i18n-aria-label="@@dialogClose"
         (click)="dialog.close()"
       >
-        &times;
+        <span class="dialog__close-face">
+          <ng-icon name="faSolidXmark" />
+        </span>
       </button>
     </div>
     <div class="dialog__body">
       <ng-content />
+    </div>
+    <div class="dialog__foot" aria-hidden="true">
+      <svg-icon class="screw icon--soft-purple" src="assets/icons/screw.svg" />
+      <svg-icon class="dialog__dots icon--soft-purple" src="assets/images/dots-card.svg" />
+      <svg-icon class="screw icon--soft-purple" src="assets/icons/screw.svg" />
     </div>
   </div>
 </dialog>

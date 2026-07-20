@@ -19,6 +19,7 @@
 
 <app-detail-dialog
   [open]="selected() !== null"
+  [icon]="selected()?.icon ?? ''"
   [title]="(selected()?.role ?? '') + ' — ' + (selected()?.company ?? '')"
   (closed)="selected.set(null)"
 >

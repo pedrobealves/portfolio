@@ -1,6 +1,9 @@
 import { Component, signal } from '@angular/core'
 import { By } from '@angular/platform-browser'
 import { TestBed } from '@angular/core/testing'
+import { provideHttpClient } from '@angular/common/http'
+import { provideHttpClientTesting } from '@angular/common/http/testing'
+import { provideAngularSvgIcon } from 'angular-svg-icon'
 import { DetailDialog } from './detail-dialog'
 
 @Component({
@@ -14,6 +17,12 @@ class Host {
 }
 
 describe('DetailDialog', () => {
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [provideHttpClient(), provideHttpClientTesting(), provideAngularSvgIcon()]
+    })
+  })
+
   it('opens the native dialog when open is set', () => {
     const fixture = TestBed.createComponent(Host)
     fixture.detectChanges()

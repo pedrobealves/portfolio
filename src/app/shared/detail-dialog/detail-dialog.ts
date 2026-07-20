@@ -7,16 +7,24 @@ import {
   output,
   viewChild
 } from '@angular/core'
+import { NgIconComponent, provideIcons, provideNgIconsConfig } from '@ng-icons/core'
+import { faSolidXmark } from '@ng-icons/font-awesome/solid'
+import { SvgIconComponent } from 'angular-svg-icon'
 
 @Component({
   selector: 'app-detail-dialog',
   standalone: true,
+  imports: [NgIconComponent, SvgIconComponent],
+  viewProviders: [provideIcons({ faSolidXmark })],
+  providers: [provideNgIconsConfig({ size: '1.56em' })],
   templateUrl: './detail-dialog.html',
   styleUrl: './detail-dialog.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DetailDialog {
   readonly title = input<string>('')
+  readonly icon = input<string>('')
+  readonly logo = input<string>('')
   readonly open = input(false)
   readonly closed = output<void>()
 

@@ -144,22 +144,41 @@ button:focus-visible {
 }
 
 .detail {
+  &__period,
+  &__list li,
+  &__tech {
+    background-color: $dark-purple;
+    border-radius: $radius-md;
+    padding: $padding;
+  }
   &__period {
     color: $green;
-    margin-bottom: 0.6em;
   }
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 0.6em;
-    margin-bottom: 0.8em;
-    li {
-      list-style: disc;
-      margin-left: 1.2em;
-    }
+    gap: $padding;
   }
   &__tech {
-    color: $white-purple;
+    color: $pale-purple;
     font-size: 0.85em;
+  }
+  &__links {
+    display: flex;
+    gap: $padding;
+    background-color: $dark-purple;
+    border-radius: $radius-md;
+    padding: $padding;
+
+    a {
+      flex: 1;
+    }
+
+    span {
+      justify-content: center;
+      align-items: center;
+      gap: 0.5em;
+      display: flex;
+    }
   }
 }

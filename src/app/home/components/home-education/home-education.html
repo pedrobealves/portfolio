@@ -19,6 +19,7 @@
 
 <app-detail-dialog
   [open]="selected() !== null"
+  [logo]="selected()?.logo ?? ''"
   [title]="selected()?.name ?? ''"
   (closed)="selected.set(null)"
 >
