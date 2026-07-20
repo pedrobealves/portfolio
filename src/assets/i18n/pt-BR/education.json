@@ -5,7 +5,7 @@
     "institution": "UTFPR",
     "start": "2026",
     "end": "2028",
-    "logo": "assets/images/utfpr.svg",
+    "logo": "assets/images/pos-utfpr.svg",
     "description": "Ciclo completo de IA generativa: LLMOps, RAG e fine-tuning (LoRA/PEFT), agentes autônomos com LangGraph, avaliação com RAGAs e TruLens, e governança (NIST AI RMF, EU AI Act). Em andamento."
   },
   {
